@@ -856,7 +856,7 @@
                         </div>
                     @endif
 
-                    <form action="{{ route('inquiry.store') }}" method="POST" class="space-y-4">
+                    <form id="home-inquiry-form" action="{{ route('inquiry.store') }}" method="POST" class="space-y-4">
                         @csrf
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                             <div>
@@ -874,7 +874,7 @@
                         <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
                             <div>
                                 <label for="home-event_type" class="block text-xs font-bold text-slate-700 mb-1">Event Type</label>
-                                <select id="home-event_type" name="event_type" class="w-full px-3 py-2 text-xs bg-white border border-slate-300 rounded-xl focus:border-amber-500 focus:outline-none">
+                                <select id="home-event_type" name="event_type" class="w-full px-3.5 py-2 text-xs bg-white border border-slate-300 rounded-xl focus:border-amber-500 focus:outline-none">
                                     <option value="Wedding">Wedding</option>
                                     <option value="Reception">Reception</option>
                                     <option value="Ring Ceremony / Tilak">Ring Ceremony / Tilak</option>
@@ -886,12 +886,12 @@
                             <div>
                                 <label for="home-event_date" class="block text-xs font-bold text-slate-700 mb-1">Tentative Date</label>
                                 <input type="date" id="home-event_date" name="event_date" value="{{ old('event_date') }}"
-                                       class="w-full px-3 py-2 text-xs bg-white border border-slate-300 rounded-xl focus:border-amber-500 focus:outline-none">
+                                       class="w-full px-3.5 py-2 text-xs bg-white border border-slate-300 rounded-xl focus:border-amber-500 focus:outline-none">
                             </div>
                             <div>
                                 <label for="home-guests_count" class="block text-xs font-bold text-slate-700 mb-1">Guests Count</label>
                                 <input type="number" id="home-guests_count" name="guests_count" value="{{ old('guests_count', 300) }}"
-                                       class="w-full px-3 py-2 text-xs bg-white border border-slate-300 rounded-xl focus:border-amber-500 focus:outline-none">
+                                       class="w-full px-3.5 py-2 text-xs bg-white border border-slate-300 rounded-xl focus:border-amber-500 focus:outline-none">
                             </div>
                         </div>
 
@@ -901,9 +901,14 @@
                                       class="w-full px-3.5 py-2 text-xs bg-white border border-slate-300 rounded-xl focus:border-amber-500 focus:outline-none">{{ old('message') }}</textarea>
                         </div>
 
-                        <button type="submit" class="w-full sm:w-auto px-7 py-3 bg-slate-950 hover:bg-slate-800 text-white font-semibold text-xs rounded-full transition shadow-xs">
-                            Submit Inquiry
-                        </button>
+                        <div class="flex flex-col sm:flex-row items-center gap-3">
+                            <button type="submit" id="home-submit-btn"
+                                    class="w-full sm:w-auto px-7 py-3 bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs uppercase tracking-wider rounded-xl transition shadow-md shadow-emerald-600/20 inline-flex items-center justify-center gap-2 cursor-pointer">
+                                <svg class="w-4 h-4 fill-current text-white" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766 0-3.18-2.587-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.007c.106.005.249-.04.39.299.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86.173.086.275.072.376-.044.101-.116.433-.506.549-.68.116-.173.231-.144.39-.086s1.011.477 1.184.564.289.13.332.202c.043.073.043.419-.101.824z"/></svg>
+                                <span>Submit Inquiry on WhatsApp (7717702563)</span>
+                            </button>
+                            <span class="text-xs text-slate-500">Directly opens WhatsApp to <strong>7717702563</strong></span>
+                        </div>
                     </form>
                 </div>
 
@@ -1008,6 +1013,48 @@
         document.addEventListener('keydown', (e) => {
             if (e.key === 'Escape') closeLightbox();
         });
+
+        // Home Inquiry Form WhatsApp Handler
+        const homeForm = document.getElementById('home-inquiry-form');
+        const homeBtn = document.getElementById('home-submit-btn');
+        if (homeForm && homeBtn) {
+            homeForm.addEventListener('submit', function (e) {
+                if (homeBtn.disabled) return;
+                const name = document.getElementById('home-name').value.trim();
+                const phone = document.getElementById('home-phone').value.trim();
+                if (!name || !phone) return;
+
+                e.preventDefault();
+                homeBtn.innerHTML = `
+                    <svg class="animate-spin w-4 h-4 text-white" fill="none" viewBox="0 0 24 24">
+                        <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                        <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                    </svg>
+                    <span>Connecting to WhatsApp (7717702563)...</span>
+                `;
+                homeBtn.disabled = true;
+
+                fetch(homeForm.action, {
+                    method: 'POST',
+                    body: new FormData(homeForm),
+                    headers: {
+                        'X-Requested-With': 'XMLHttpRequest',
+                        'Accept': 'application/json'
+                    }
+                })
+                .then(res => res.json())
+                .then(data => {
+                    if (data && data.wa_url) {
+                        window.location.href = data.wa_url;
+                    } else {
+                        homeForm.submit();
+                    }
+                })
+                .catch(() => {
+                    homeForm.submit();
+                });
+            });
+        }
     </script>
     @endpush
 @endsection

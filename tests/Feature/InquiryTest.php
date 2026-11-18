@@ -52,6 +52,7 @@ class InquiryTest extends TestCase
         ]);
 
         $response->assertRedirect();
+        $this->assertStringContainsString('https://wa.me/917717702563', $response->headers->get('Location'));
         $this->assertDatabaseHas('inquiries', [
             'name' => 'Himanshu Kumar',
             'phone' => '7717702563',

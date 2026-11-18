@@ -3,18 +3,19 @@
 namespace App\Http\Controllers;
 
 use App\Models\Inquiry;
+use Illuminate\Http\JsonResponse;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 
 class InquiryController extends Controller
 {
     /**
-     * Store a newly created inquiry from the website.
+     * Store a newly created inquiry from the website and forward to WhatsApp (7717702563).
      *
      * @param Request $request
-     * @return RedirectResponse
+     * @return RedirectResponse|JsonResponse
      */
-    public function store(Request $request): RedirectResponse
+    public function store(Request $request): RedirectResponse|JsonResponse
     {
         $validated = $request->validate([
             'name' => ['required', 'string', 'max:120'],
@@ -29,22 +30,29 @@ class InquiryController extends Controller
 
         $inquiry = Inquiry::create($validated);
 
-        // Pre-build WhatsApp text for easy forwarding
-        $waMessage = "Namaste Patna Caterer & Tent House,\n"
-            . "New Booking Inquiry from Website:\n"
+        // Pre-build WhatsApp text for number 7717702563
+        $waMessage = "Namaste Patna Caterer & Patna Tent House,\n"
+            . "I would like to submit an Event Booking Inquiry:\n"
             . "• Name: " . $inquiry->name . "\n"
             . "• Phone: " . $inquiry->phone . "\n"
-            . "• Event: " . ($inquiry->event_type ?? 'Not Specified') . "\n"
-            . "• Date: " . ($inquiry->event_date ?? 'To be decided') . "\n"
-            . "• Guests: " . ($inquiry->guests_count ?? 'Not specified') . "\n"
-            . "• Service: " . ($inquiry->service_needed ?? 'Catering & Tent') . "\n"
-            . "• Food: " . ($inquiry->food_preference ?? 'Veg / Non-Veg') . "\n"
-            . "• Notes: " . ($inquiry->message ?? 'None');
+            . "• Event Type: " . ($inquiry->event_type ?? 'Wedding / Celebration') . "\n"
+            . "• Tentative Date: " . ($inquiry->event_date ?? 'To be decided') . "\n"
+            . "• Estimated Guests: " . ($inquiry->guests_count ?? '300') . " Guests\n"
+            . "• Service Needed: " . ($inquiry->service_needed ?? 'Both Catering & Tent House') . "\n"
+            . "• Food Preference: " . ($inquiry->food_preference ?? 'Veg & Non-Veg') . "\n"
+            . "• Venue / Notes: " . ($inquiry->message ?? 'Near Patna') . "\n\n"
+            . "Please confirm date availability and share quotation!";
 
         $waUrl = 'https://wa.me/917717702563?text=' . urlencode($waMessage);
 
-        return redirect()->to(url()->previous() . '#inquiry-form')
-            ->with('success', 'Aapka inquiry request save ho gaya hai! Hum jald hi 7717702563 se call karenge.')
-            ->with('wa_url', $waUrl);
+        if ($request->expectsJson() || $request->ajax()) {
+            return response()->json([
+                'success' => true,
+                'wa_url' => $waUrl,
+                'message' => 'Inquiry saved successfully. Redirecting to WhatsApp...',
+            ]);
+        }
+
+        return redirect()->away($waUrl);
     }
 }

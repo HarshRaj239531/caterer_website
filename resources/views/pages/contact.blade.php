@@ -140,7 +140,7 @@
                         </div>
                     @endif
 
-                    <form action="{{ route('inquiry.store') }}" method="POST" class="space-y-4">
+                    <form id="contact-inquiry-form" action="{{ route('inquiry.store') }}" method="POST" class="space-y-4">
                         @csrf
 
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -241,13 +241,14 @@
                                       class="w-full px-4 py-2.5 text-xs bg-white border border-slate-300 focus:border-amber-500 focus:ring-2 focus:ring-amber-200 focus:outline-none rounded-xl">{{ old('message') }}</textarea>
                         </div>
 
-                        <!-- Submit -->
+                        <!-- Submit Directly to WhatsApp -->
                         <div class="pt-2 flex flex-col sm:flex-row items-center gap-3">
-                            <button type="submit"
-                                    class="w-full sm:w-auto px-8 py-3.5 bg-gradient-to-r from-amber-500 to-amber-600 text-white font-extrabold text-xs uppercase tracking-wider rounded-xl hover:from-amber-600 hover:to-amber-700 transition shadow-lg shadow-amber-500/20">
-                                Submit Booking Inquiry
+                            <button type="submit" id="contact-submit-btn"
+                                    class="w-full sm:w-auto px-8 py-3.5 bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs uppercase tracking-wider rounded-xl transition shadow-lg shadow-emerald-600/20 inline-flex items-center justify-center gap-2.5 cursor-pointer">
+                                <svg class="w-4 h-4 fill-current text-white" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766 0-3.18-2.587-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.007c.106.005.249-.04.39.299.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86.173.086.275.072.376-.044.101-.116.433-.506.549-.68.116-.173.231-.144.39-.086s1.011.477 1.184.564.289.13.332.202c.043.073.043.419-.101.824z"/></svg>
+                                <span>Submit Inquiry on WhatsApp (7717702563)</span>
                             </button>
-                            <span class="text-xs text-slate-500">Or call us directly at <a href="tel:7717702563" class="font-bold text-amber-700 underline">7717702563</a></span>
+                            <span class="text-xs text-slate-500">Opens WhatsApp directly with <strong>+91 7717702563</strong></span>
                         </div>
                     </form>
                 </div>
@@ -301,4 +302,56 @@
             </div>
         </div>
     </section>
+
+    @push('scripts')
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const form = document.getElementById('contact-inquiry-form');
+            const btn = document.getElementById('contact-submit-btn');
+            if (!form || !btn) return;
+
+            form.addEventListener('submit', function (e) {
+                // Prevent duplicate clicks
+                if (btn.disabled) return;
+
+                const name = document.getElementById('name').value.trim();
+                const phone = document.getElementById('phone').value.trim();
+                if (!name || !phone) return; // let HTML5 validation handle
+
+                e.preventDefault();
+                const originalContent = btn.innerHTML;
+                btn.innerHTML = `
+                    <svg class="animate-spin w-4 h-4 text-white" fill="none" viewBox="0 0 24 24">
+                        <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                        <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                    </svg>
+                    <span>Connecting to WhatsApp (+91 7717702563)...</span>
+                `;
+                btn.disabled = true;
+
+                // Save to database via AJAX, then redirect to WhatsApp
+                fetch(form.action, {
+                    method: 'POST',
+                    body: new FormData(form),
+                    headers: {
+                        'X-Requested-With': 'XMLHttpRequest',
+                        'Accept': 'application/json'
+                    }
+                })
+                .then(res => res.json())
+                .then(data => {
+                    if (data && data.wa_url) {
+                        window.location.href = data.wa_url;
+                    } else {
+                        form.submit();
+                    }
+                })
+                .catch(() => {
+                    // Fallback to standard form submission
+                    form.submit();
+                });
+            });
+        });
+    </script>
+    @endpush
 @endsection
