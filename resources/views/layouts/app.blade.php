@@ -12,10 +12,15 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
 
-    <!-- Vite Styles and Scripts -->
-    @if (file_exists(public_path('build/manifest.json')) || file_exists(public_path('hot')))
-        @vite(['resources/css/app.css', 'resources/js/app.js'])
-    @endif
+    <!-- Stylesheets & Scripts with Serverless Fallback -->
+    @php
+        $manifestPath = public_path('build/manifest.json');
+        $manifest = file_exists($manifestPath) ? json_decode(file_get_contents($manifestPath), true) : null;
+        $cssFile = $manifest['resources/css/app.css']['file'] ?? 'assets/app-BKE5L45W.css';
+        $jsFile = $manifest['resources/js/app.js']['file'] ?? 'assets/app-DYgVmTxt.js';
+    @endphp
+    <link rel="stylesheet" href="/build/{{ $cssFile }}">
+    <script type="module" src="/build/{{ $jsFile }}"></script>
 
     <style>
         ::selection {
