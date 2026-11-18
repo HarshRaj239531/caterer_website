@@ -8,7 +8,9 @@
     <meta name="description" content="@yield('meta_description', 'Patna Caterer & Patna Tent House - Boring Road, Patna. Premium catering services, Champaran Ahuna Handi, royal wedding tent, German hangar, mandap decor, and event planning. Call 7717702563.')">
     <meta name="keywords" content="Patna Caterer, Patna Tent House, Best Caterers in Patna, Wedding Caterer Boring Road, Champaran Handi Mutton Patna, Tent House Boring Road Patna, Event Organizer Patna">
 
-    @fonts
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
 
     <!-- Vite Styles and Scripts -->
     @if (file_exists(public_path('build/manifest.json')) || file_exists(public_path('hot')))
