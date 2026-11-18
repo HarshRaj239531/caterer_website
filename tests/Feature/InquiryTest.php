@@ -19,7 +19,7 @@ class InquiryTest extends TestCase
             '/' => 'Patna Caterer',
             '/catering' => 'Authentic Cuisines',
             '/tent-house' => 'German Hangar',
-            '/packages' => 'Transparent Packages',
+            '/gallery' => 'Live Event',
             '/about' => 'Our Story',
             '/contact' => 'Get in Touch',
         ];
@@ -29,6 +29,10 @@ class InquiryTest extends TestCase
             $response->assertStatus(200);
             $response->assertSee($expectedContent);
         }
+
+        // Test packages redirect to gallery
+        $packagesResponse = $this->get('/packages');
+        $packagesResponse->assertRedirect('/gallery');
     }
 
     /**

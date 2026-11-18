@@ -167,8 +167,8 @@
                         No middleman markups. Patna Caterer & Tent House owns 100% of the food, decor, and structural inventory.
                     </p>
                 </div>
-                <a href="{{ route('packages') }}" class="text-xs font-bold text-amber-600 hover:text-amber-700 flex items-center gap-1">
-                    <span>View All Packages</span>
+                <a href="{{ route('gallery') }}" class="text-xs font-bold text-amber-600 hover:text-amber-700 flex items-center gap-1">
+                    <span>View Event Gallery</span>
                     <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
                 </a>
             </div>
@@ -381,76 +381,221 @@
         </div>
     </section>
 
-    <!-- 6. CURATED PACKAGES STRIP -->
-    <section class="motion-section py-16 sm:py-20 border-t border-slate-200/80 bg-white/50 backdrop-blur-sm">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-xl mx-auto mb-12">
-                <span class="text-xs font-bold uppercase tracking-wider text-amber-700 bg-amber-50 border border-amber-200 px-3 py-1 rounded-full">
-                    Transparent Options
-                </span>
-                <h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-slate-950 mt-3 mb-2">
-                    Curated Event Packages
-                </h2>
-                <p class="text-slate-500 text-xs sm:text-sm">
-                    Transparent per-plate estimates tailored to your guest count and chosen specifications.
-                </p>
+    <!-- 6. LIVE EVENT WORK & PHOTO GALLERY -->
+    <section class="motion-section py-16 sm:py-24 border-t border-slate-200/80 bg-white/60 backdrop-blur-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+                <div class="max-w-2xl">
+                    <span class="text-xs font-bold uppercase tracking-wider text-amber-700 bg-amber-50 border border-amber-200 px-3.5 py-1 rounded-full inline-block mb-3">
+                        Live Event Work Showcase
+                    </span>
+                    <h2 class="text-2xl sm:text-4xl font-bold tracking-tight text-slate-950 mb-3">
+                        Glimpses of Our Setups & Grand Feasts
+                    </h2>
+                    <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">
+                        Authentic photography from grand weddings, luxury mandaps, live catering stalls, and waterproof German hangars crafted across Patna.
+                    </p>
+                </div>
+                <div class="flex flex-wrap items-center gap-3">
+                    <a href="{{ route('gallery') }}" class="px-5 py-2.5 bg-slate-950 hover:bg-slate-800 text-white font-semibold text-xs rounded-full transition shadow-sm inline-flex items-center gap-2">
+                        <span>Explore Full Gallery (16+ Photos)</span>
+                        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                    </a>
+                </div>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <!-- Silver -->
-                <div class="motion-card glass-card p-6 rounded-2xl border border-slate-200 flex flex-col justify-between">
-                    <div>
-                        <div class="flex justify-between items-center mb-3">
-                            <span class="text-xs font-bold text-slate-600">Silver Package</span>
-                            <span class="text-[10px] bg-slate-100 px-2 py-0.5 rounded font-medium">50-200 Guests</span>
-                        </div>
-                        <h4 class="text-base font-bold text-slate-950 mb-1">Birthday, Tilak & Puja</h4>
-                        <p class="text-xs text-slate-500 mb-4">Complete buffet spread with neat canopy decor and lighting.</p>
-                        <div class="text-xl font-bold text-slate-900 font-mono mb-4">
-                            ₹450 - ₹650 <span class="text-xs font-normal text-slate-500 font-sans">/ plate</span>
+            <!-- Featured 8 Gallery Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Card 1 -->
+                <div onclick="openLightbox('/images/gallery/mandap-grand.jpg', 'Royal Floral Mandap Architecture', 'Grand Mandap & Decor', 'Boring Road, Patna')"
+                     class="group motion-card glass-card rounded-2xl overflow-hidden border border-slate-200 hover:shadow-xl transition-all cursor-pointer">
+                    <div class="relative aspect-4/3 overflow-hidden bg-slate-100">
+                        <img src="{{ asset('images/gallery/mandap-grand.jpg') }}" alt="Royal Floral Mandap Architecture in Patna"
+                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
+                        <span class="absolute top-3 left-3 text-[10px] font-bold uppercase tracking-wider bg-white/90 backdrop-blur-md text-slate-900 px-2.5 py-1 rounded-md">
+                            Mandap & Decor
+                        </span>
+                        <div class="absolute bottom-3 left-3 right-3 text-white">
+                            <h3 class="text-sm font-bold drop-shadow">Royal Floral Mandap</h3>
+                            <p class="text-[11px] text-amber-200 flex items-center gap-1 mt-0.5">
+                                <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/></svg>
+                                <span>Boring Road, Patna</span>
+                            </p>
                         </div>
                     </div>
-                    <a href="{{ route('packages') }}" class="w-full text-center py-2.5 bg-slate-100 hover:bg-slate-200 text-slate-900 font-semibold text-xs rounded-xl transition">
-                        View Details →
-                    </a>
                 </div>
 
-                <!-- Gold -->
-                <div class="motion-card glass-card p-6 rounded-2xl border-2 border-amber-400 relative shadow-sm flex flex-col justify-between">
-                    <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-amber-500 text-white text-[10px] font-bold uppercase tracking-wider px-3 py-0.5 rounded-full">
-                        Popular Choice
-                    </div>
-                    <div>
-                        <div class="flex justify-between items-center mb-3 mt-1">
-                            <span class="text-xs font-bold text-amber-700">Gold Package</span>
-                            <span class="text-[10px] bg-amber-100 text-amber-800 px-2 py-0.5 rounded font-medium">200-800 Guests</span>
+                <!-- Card 2 -->
+                <div onclick="openLightbox('/images/gallery/buffet-spread.jpg', 'Gourmet Banquet Buffet Spread', 'Royal Catering Feast', 'Bailey Road, Patna')"
+                     class="group motion-card glass-card rounded-2xl overflow-hidden border border-slate-200 hover:shadow-xl transition-all cursor-pointer">
+                    <div class="relative aspect-4/3 overflow-hidden bg-slate-100">
+                        <img src="{{ asset('images/gallery/buffet-spread.jpg') }}" alt="Gourmet Banquet Buffet in Patna"
+                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
+                        <span class="absolute top-3 left-3 text-[10px] font-bold uppercase tracking-wider bg-white/90 backdrop-blur-md text-slate-900 px-2.5 py-1 rounded-md">
+                            Catering Buffet
+                        </span>
+                        <div class="absolute bottom-3 left-3 right-3 text-white">
+                            <h3 class="text-sm font-bold drop-shadow">32-Dish Royal Feast</h3>
+                            <p class="text-[11px] text-amber-200 flex items-center gap-1 mt-0.5">
+                                <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/></svg>
+                                <span>Bailey Road, Patna</span>
+                            </p>
                         </div>
-                        <h4 class="text-base font-bold text-slate-950 mb-1">Grand Wedding & Reception</h4>
-                        <p class="text-xs text-slate-500 mb-4">32+ course menu, live chaat stalls, floral mandap, and VIP seating.</p>
-                        <div class="text-xl font-bold text-amber-600 font-mono mb-4">
-                            ₹750 - ₹1,150 <span class="text-xs font-normal text-slate-500 font-sans">/ plate</span>
-                        </div>
                     </div>
-                    <a href="{{ route('packages') }}" class="w-full text-center py-2.5 bg-slate-950 hover:bg-slate-800 text-white font-semibold text-xs rounded-xl transition shadow-xs">
-                        View Details →
-                    </a>
                 </div>
 
-                <!-- Platinum -->
-                <div class="motion-card glass-card p-6 rounded-2xl border border-slate-200 flex flex-col justify-between">
-                    <div>
-                        <div class="flex justify-between items-center mb-3">
-                            <span class="text-xs font-bold text-slate-600">Platinum Royal</span>
-                            <span class="text-[10px] bg-slate-100 px-2 py-0.5 rounded font-medium">500+ Guests</span>
-                        </div>
-                        <h4 class="text-base font-bold text-slate-950 mb-1">Turnkey Luxury Gala</h4>
-                        <p class="text-xs text-slate-500 mb-4">German hangar AC pandal, Champaran live counter, and luxury decor.</p>
-                        <div class="text-xl font-bold text-slate-900 font-mono mb-4">
-                            ₹1,350 - ₹2,200 <span class="text-xs font-normal text-slate-500 font-sans">/ plate</span>
+                <!-- Card 3 -->
+                <div onclick="openLightbox('/images/gallery/live-chaat.jpg', 'Live Banarasi Chaat & Street Food Counter', 'Live Food Counters', 'Patliputra Colony, Patna')"
+                     class="group motion-card glass-card rounded-2xl overflow-hidden border border-slate-200 hover:shadow-xl transition-all cursor-pointer">
+                    <div class="relative aspect-4/3 overflow-hidden bg-slate-100">
+                        <img src="{{ asset('images/gallery/live-chaat.jpg') }}" alt="Live Banarasi Chaat Counter in Patna"
+                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
+                        <span class="absolute top-3 left-3 text-[10px] font-bold uppercase tracking-wider bg-white/90 backdrop-blur-md text-slate-900 px-2.5 py-1 rounded-md">
+                            Live Counters
+                        </span>
+                        <div class="absolute bottom-3 left-3 right-3 text-white">
+                            <h3 class="text-sm font-bold drop-shadow">Banarasi Chaat Stall</h3>
+                            <p class="text-[11px] text-amber-200 flex items-center gap-1 mt-0.5">
+                                <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/></svg>
+                                <span>Patliputra Colony</span>
+                            </p>
                         </div>
                     </div>
-                    <a href="{{ route('packages') }}" class="w-full text-center py-2.5 bg-slate-100 hover:bg-slate-200 text-slate-900 font-semibold text-xs rounded-xl transition">
-                        View Details →
+                </div>
+
+                <!-- Card 4 -->
+                <div onclick="openLightbox('/images/gallery/german-hangar.jpg', 'All-Weather German Hangar Pandal Setup', 'Tent House Infrastructure', 'Danapur Cantonment, Patna')"
+                     class="group motion-card glass-card rounded-2xl overflow-hidden border border-slate-200 hover:shadow-xl transition-all cursor-pointer">
+                    <div class="relative aspect-4/3 overflow-hidden bg-slate-100">
+                        <img src="{{ asset('images/gallery/german-hangar.jpg') }}" alt="German Hangar Pandal in Patna"
+                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
+                        <span class="absolute top-3 left-3 text-[10px] font-bold uppercase tracking-wider bg-white/90 backdrop-blur-md text-slate-900 px-2.5 py-1 rounded-md">
+                            German Hangar
+                        </span>
+                        <div class="absolute bottom-3 left-3 right-3 text-white">
+                            <h3 class="text-sm font-bold drop-shadow">Waterproof AC Pandal</h3>
+                            <p class="text-[11px] text-amber-200 flex items-center gap-1 mt-0.5">
+                                <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/></svg>
+                                <span>Danapur, Patna</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 5 -->
+                <div onclick="openLightbox('/images/gallery/stage-lighting.jpg', 'Warm Fairy Illumination & Stage Decor', 'Theme Lighting', 'Kankarbagh, Patna')"
+                     class="group motion-card glass-card rounded-2xl overflow-hidden border border-slate-200 hover:shadow-xl transition-all cursor-pointer">
+                    <div class="relative aspect-4/3 overflow-hidden bg-slate-100">
+                        <img src="{{ asset('images/gallery/stage-lighting.jpg') }}" alt="Stage Lighting and Decor in Patna"
+                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
+                        <span class="absolute top-3 left-3 text-[10px] font-bold uppercase tracking-wider bg-white/90 backdrop-blur-md text-slate-900 px-2.5 py-1 rounded-md">
+                            Lighting & Stage
+                        </span>
+                        <div class="absolute bottom-3 left-3 right-3 text-white">
+                            <h3 class="text-sm font-bold drop-shadow">Warm Ambient Stage</h3>
+                            <p class="text-[11px] text-amber-200 flex items-center gap-1 mt-0.5">
+                                <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/></svg>
+                                <span>Kankarbagh, Patna</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 6 -->
+                <div onclick="openLightbox('/images/gallery/tandoor-station.jpg', 'Live Charcoal Tandoor & Kebabs', 'Live Food Counters', 'Saguna More, Patna')"
+                     class="group motion-card glass-card rounded-2xl overflow-hidden border border-slate-200 hover:shadow-xl transition-all cursor-pointer">
+                    <div class="relative aspect-4/3 overflow-hidden bg-slate-100">
+                        <img src="{{ asset('images/gallery/tandoor-station.jpg') }}" alt="Live Tandoor Counter in Patna"
+                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
+                        <span class="absolute top-3 left-3 text-[10px] font-bold uppercase tracking-wider bg-white/90 backdrop-blur-md text-slate-900 px-2.5 py-1 rounded-md">
+                            Live Counters
+                        </span>
+                        <div class="absolute bottom-3 left-3 right-3 text-white">
+                            <h3 class="text-sm font-bold drop-shadow">Live Tandoor & Kebabs</h3>
+                            <p class="text-[11px] text-amber-200 flex items-center gap-1 mt-0.5">
+                                <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/></svg>
+                                <span>Saguna More, Patna</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 7 -->
+                <div onclick="openLightbox('/images/gallery/dining-setup.jpg', 'VIP Royal Dining & Banquet Seating', 'Catering Logistics', 'Rajendra Nagar, Patna')"
+                     class="group motion-card glass-card rounded-2xl overflow-hidden border border-slate-200 hover:shadow-xl transition-all cursor-pointer">
+                    <div class="relative aspect-4/3 overflow-hidden bg-slate-100">
+                        <img src="{{ asset('images/gallery/dining-setup.jpg') }}" alt="VIP Dining Arrangement in Patna"
+                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
+                        <span class="absolute top-3 left-3 text-[10px] font-bold uppercase tracking-wider bg-white/90 backdrop-blur-md text-slate-900 px-2.5 py-1 rounded-md">
+                            Seating & Decor
+                        </span>
+                        <div class="absolute bottom-3 left-3 right-3 text-white">
+                            <h3 class="text-sm font-bold drop-shadow">VIP Dining Lounge</h3>
+                            <p class="text-[11px] text-amber-200 flex items-center gap-1 mt-0.5">
+                                <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/></svg>
+                                <span>Rajendra Nagar, Patna</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 8 -->
+                <div onclick="openLightbox('/images/gallery/dessert-delights.jpg', 'Artisan Indian Sweets & Royal Desserts', 'Sweets & Desserts', 'Ashiana Nagar, Patna')"
+                     class="group motion-card glass-card rounded-2xl overflow-hidden border border-slate-200 hover:shadow-xl transition-all cursor-pointer">
+                    <div class="relative aspect-4/3 overflow-hidden bg-slate-100">
+                        <img src="{{ asset('images/gallery/dessert-delights.jpg') }}" alt="Royal Indian Desserts in Patna"
+                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
+                        <span class="absolute top-3 left-3 text-[10px] font-bold uppercase tracking-wider bg-white/90 backdrop-blur-md text-slate-900 px-2.5 py-1 rounded-md">
+                            Royal Sweets
+                        </span>
+                        <div class="absolute bottom-3 left-3 right-3 text-white">
+                            <h3 class="text-sm font-bold drop-shadow">Artisan Sweets Bar</h3>
+                            <p class="text-[11px] text-amber-200 flex items-center gap-1 mt-0.5">
+                                <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/></svg>
+                                <span>Ashiana Nagar, Patna</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Justdial Verified Business Link Banner -->
+            <div class="mt-12 glass-card rounded-3xl p-6 sm:p-8 border border-amber-200/90 bg-gradient-to-r from-amber-50/60 via-white to-orange-50/50 flex flex-col sm:flex-row items-center justify-between gap-6 shadow-sm">
+                <div class="flex items-center gap-4">
+                    <div class="w-12 h-12 rounded-2xl bg-amber-500 text-white flex items-center justify-center font-bold text-lg shadow-sm shrink-0">
+                        JD
+                    </div>
+                    <div>
+                        <div class="flex items-center gap-2">
+                            <h3 class="text-base sm:text-lg font-bold text-slate-950">
+                                Want to browse 90+ live raw photos of our setups?
+                            </h3>
+                            <span class="hidden md:inline-flex text-[10px] bg-emerald-100 text-emerald-800 font-bold px-2 py-0.5 rounded-full">
+                                Verified DT-47WRSUKTS1G
+                            </span>
+                        </div>
+                        <p class="text-xs text-slate-600 mt-1">
+                            Browse unedited client event albums, mandap decor, chafing setups, and venue lawns on our Justdial verified business profile.
+                        </p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-3 shrink-0 w-full sm:w-auto">
+                    <a href="https://jsdl.in/DT-47WRSUKTS1G" target="_blank" rel="noopener noreferrer"
+                       class="flex-1 sm:flex-initial text-center px-5 py-2.5 bg-amber-500 hover:bg-amber-600 text-white font-semibold text-xs rounded-full transition shadow-sm inline-flex items-center justify-center gap-1.5">
+                        <span>Open Justdial Album</span>
+                        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+                    </a>
+                    <a href="{{ route('gallery') }}"
+                       class="flex-1 sm:flex-initial text-center px-5 py-2.5 bg-slate-900 hover:bg-slate-800 text-white font-semibold text-xs rounded-full transition shadow-sm">
+                        View All 16 Photos →
                     </a>
                 </div>
             </div>
@@ -766,4 +911,81 @@
         </div>
     </section>
 
+    <!-- Lightbox Modal for Photo Inspection -->
+    <div id="image-lightbox" class="fixed inset-0 z-50 bg-slate-950/80 backdrop-blur-md hidden items-center justify-center p-4">
+        <div class="relative max-w-4xl w-full bg-white rounded-3xl overflow-hidden shadow-2xl border border-slate-200">
+            <button onclick="closeLightbox()" type="button"
+                    class="absolute top-4 right-4 z-10 w-9 h-9 rounded-full bg-white/90 text-slate-800 hover:bg-slate-100 flex items-center justify-center shadow transition"
+                    aria-label="Close modal">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+            </button>
+            <div class="grid grid-cols-1 md:grid-cols-3">
+                <div class="md:col-span-2 bg-slate-950 flex items-center justify-center max-h-[70vh]">
+                    <img id="lightbox-img" src="" alt="Enlarged setup view" class="max-h-[70vh] w-full object-contain">
+                </div>
+                <div class="p-6 md:p-8 flex flex-col justify-between bg-white">
+                    <div>
+                        <span id="lightbox-category" class="text-[10px] font-bold uppercase tracking-wider bg-amber-100 text-amber-900 px-2.5 py-1 rounded-md inline-block mb-3">
+                            Category
+                        </span>
+                        <h3 id="lightbox-title" class="text-xl font-bold text-slate-950 mb-2 leading-snug">
+                            Title
+                        </h3>
+                        <p id="lightbox-location" class="text-xs text-slate-500 flex items-center gap-1.5 mb-4">
+                            <svg class="w-3.5 h-3.5 text-amber-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/></svg>
+                            <span>Location</span>
+                        </p>
+                        <p class="text-xs text-slate-600 leading-relaxed">
+                            Crafted by the in-house team at Patna Caterer & Patna Tent House. All structural frames, linen, cutlery, and culinary stations are owned and maintained by us.
+                        </p>
+                    </div>
+
+                    <div class="pt-6 border-t border-slate-100 space-y-2.5">
+                        <a id="lightbox-whatsapp" href="https://wa.me/917717702563" target="_blank" rel="noopener noreferrer"
+                           class="w-full py-2.5 px-4 bg-emerald-600 hover:bg-emerald-700 text-white font-semibold text-xs rounded-xl flex items-center justify-center gap-2 transition shadow-xs">
+                            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766 0-3.18-2.587-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.007c.106.005.249-.04.39.299.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86.173.086.275.072.376-.044.101-.116.433-.506.549-.68.116-.173.231-.144.39-.086s1.011.477 1.184.564.289.13.332.202c.043.073.043.419-.101.824z"/></svg>
+                            <span>Inquire for this Setup</span>
+                        </a>
+                        <button onclick="closeLightbox()" type="button"
+                                class="w-full py-2 px-4 bg-slate-100 hover:bg-slate-200 text-slate-800 font-semibold text-xs rounded-xl transition">
+                            Back to Gallery
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    @push('scripts')
+    <script>
+        function openLightbox(imgSrc, title, category, location) {
+            const modal = document.getElementById('image-lightbox');
+            if (!modal) return;
+            document.getElementById('lightbox-img').src = imgSrc;
+            document.getElementById('lightbox-title').innerText = title;
+            document.getElementById('lightbox-category').innerText = category;
+            document.getElementById('lightbox-location').querySelector('span').innerText = location;
+            
+            const waText = encodeURIComponent("Namaste Patna Caterer,\nI loved this setup from your gallery:\n" + title + " (" + category + " at " + location + ").\nPlease share availability and quote for my upcoming event.");
+            document.getElementById('lightbox-whatsapp').href = "https://wa.me/917717702563?text=" + waText;
+
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            const modal = document.getElementById('image-lightbox');
+            if (!modal) return;
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close on escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeLightbox();
+        });
+    </script>
+    @endpush
 @endsection

@@ -15,9 +15,11 @@ Route::get('/tent-house', function () {
     return view('pages.tent-house');
 })->name('tent-house');
 
-Route::get('/packages', function () {
-    return view('pages.packages');
-})->name('packages');
+Route::get('/gallery', function () {
+    return view('pages.gallery');
+})->name('gallery');
+
+Route::redirect('/packages', '/gallery')->name('packages');
 
 Route::get('/about', function () {
     return view('pages.about');

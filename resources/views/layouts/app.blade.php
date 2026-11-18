@@ -65,9 +65,9 @@
                    class="px-3.5 py-1.5 rounded-full transition {{ request()->routeIs('tent-house') ? 'bg-slate-950 text-white nav-item-active' : 'hover:text-slate-950 hover:bg-slate-100/70' }}">
                     Tent & Decor
                 </a>
-                <a href="{{ route('packages') }}"
-                   class="px-3.5 py-1.5 rounded-full transition {{ request()->routeIs('packages') ? 'bg-slate-950 text-white nav-item-active' : 'hover:text-slate-950 hover:bg-slate-100/70' }}">
-                    Pricing
+                <a href="{{ route('gallery') }}"
+                   class="px-3.5 py-1.5 rounded-full transition {{ request()->routeIs('gallery') ? 'bg-slate-950 text-white nav-item-active' : 'hover:text-slate-950 hover:bg-slate-100/70' }}">
+                    Gallery
                 </a>
                 <a href="{{ route('about') }}"
                    class="px-3.5 py-1.5 rounded-full transition {{ request()->routeIs('about') ? 'bg-slate-950 text-white nav-item-active' : 'hover:text-slate-950 hover:bg-slate-100/70' }}">
@@ -104,7 +104,7 @@
             <a href="{{ route('home') }}" class="block px-3 py-2 rounded-xl text-xs font-semibold {{ request()->routeIs('home') ? 'bg-slate-950 text-white' : 'text-slate-800 hover:bg-slate-100' }}">Home</a>
             <a href="{{ route('catering') }}" class="block px-3 py-2 rounded-xl text-xs font-semibold {{ request()->routeIs('catering') ? 'bg-slate-950 text-white' : 'text-slate-800 hover:bg-slate-100' }}">Catering</a>
             <a href="{{ route('tent-house') }}" class="block px-3 py-2 rounded-xl text-xs font-semibold {{ request()->routeIs('tent-house') ? 'bg-slate-950 text-white' : 'text-slate-800 hover:bg-slate-100' }}">Tent & Decor</a>
-            <a href="{{ route('packages') }}" class="block px-3 py-2 rounded-xl text-xs font-semibold {{ request()->routeIs('packages') ? 'bg-slate-950 text-white' : 'text-slate-800 hover:bg-slate-100' }}">Pricing</a>
+            <a href="{{ route('gallery') }}" class="block px-3 py-2 rounded-xl text-xs font-semibold {{ request()->routeIs('gallery') ? 'bg-slate-950 text-white' : 'text-slate-800 hover:bg-slate-100' }}">Gallery</a>
             <a href="{{ route('about') }}" class="block px-3 py-2 rounded-xl text-xs font-semibold {{ request()->routeIs('about') ? 'bg-slate-950 text-white' : 'text-slate-800 hover:bg-slate-100' }}">About</a>
             <a href="{{ route('contact') }}" class="block px-3 py-2 rounded-xl text-xs font-semibold {{ request()->routeIs('contact') ? 'bg-slate-950 text-white' : 'text-slate-800 hover:bg-slate-100' }}">Contact</a>
             
@@ -155,7 +155,7 @@
                         <li><a href="{{ route('home') }}" class="hover:text-amber-600 transition">Home</a></li>
                         <li><a href="{{ route('catering') }}" class="hover:text-amber-600 transition">Catering & Menus</a></li>
                         <li><a href="{{ route('tent-house') }}" class="hover:text-amber-600 transition">Tent & Decor</a></li>
-                        <li><a href="{{ route('packages') }}" class="hover:text-amber-600 transition">Pricing Packages</a></li>
+                        <li><a href="{{ route('gallery') }}" class="hover:text-amber-600 transition">Event Gallery</a></li>
                         <li><a href="{{ route('about') }}" class="hover:text-amber-600 transition">About Us</a></li>
                         <li><a href="{{ route('contact') }}" class="hover:text-amber-600 transition">Contact & Booking</a></li>
                     </ul>
