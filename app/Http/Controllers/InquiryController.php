@@ -28,19 +28,32 @@ class InquiryController extends Controller
             'message' => ['nullable', 'string', 'max:1000'],
         ]);
 
-        $inquiry = Inquiry::create($validated);
+        try {
+            Inquiry::create($validated);
+        } catch (\Throwable $e) {
+            // Gracefully ignore write errors on serverless read-only storage (e.g. Vercel)
+        }
+
+        $name = $validated['name'];
+        $phone = $validated['phone'];
+        $eventType = $validated['event_type'] ?? 'Wedding / Celebration';
+        $eventDate = $validated['event_date'] ?? 'To be decided';
+        $guestsCount = $validated['guests_count'] ?? '300';
+        $serviceNeeded = $validated['service_needed'] ?? 'Both Catering & Tent House';
+        $foodPreference = $validated['food_preference'] ?? 'Veg & Non-Veg';
+        $notes = $validated['message'] ?? 'Near Patna';
 
         // Pre-build WhatsApp text for number 7717702563
         $waMessage = "Namaste Patna Caterer & Patna Tent House,\n"
             . "I would like to submit an Event Booking Inquiry:\n"
-            . "• Name: " . $inquiry->name . "\n"
-            . "• Phone: " . $inquiry->phone . "\n"
-            . "• Event Type: " . ($inquiry->event_type ?? 'Wedding / Celebration') . "\n"
-            . "• Tentative Date: " . ($inquiry->event_date ?? 'To be decided') . "\n"
-            . "• Estimated Guests: " . ($inquiry->guests_count ?? '300') . " Guests\n"
-            . "• Service Needed: " . ($inquiry->service_needed ?? 'Both Catering & Tent House') . "\n"
-            . "• Food Preference: " . ($inquiry->food_preference ?? 'Veg & Non-Veg') . "\n"
-            . "• Venue / Notes: " . ($inquiry->message ?? 'Near Patna') . "\n\n"
+            . "• Name: " . $name . "\n"
+            . "• Phone: " . $phone . "\n"
+            . "• Event Type: " . $eventType . "\n"
+            . "• Tentative Date: " . $eventDate . "\n"
+            . "• Estimated Guests: " . $guestsCount . " Guests\n"
+            . "• Service Needed: " . $serviceNeeded . "\n"
+            . "• Food Preference: " . $foodPreference . "\n"
+            . "• Venue / Notes: " . $notes . "\n\n"
             . "Please confirm date availability and share quotation!";
 
         $waUrl = 'https://wa.me/917717702563?text=' . urlencode($waMessage);
