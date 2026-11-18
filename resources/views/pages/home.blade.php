@@ -972,14 +972,36 @@
             modal.classList.remove('hidden');
             modal.classList.add('flex');
             document.body.style.overflow = 'hidden';
+
+            if (window.gsap) {
+                gsap.fromTo(modal.firstElementChild, 
+                    { scale: 0.92, opacity: 0, y: 20 },
+                    { scale: 1, opacity: 1, y: 0, duration: 0.35, ease: "power3.out" }
+                );
+            }
         }
 
         function closeLightbox() {
             const modal = document.getElementById('image-lightbox');
             if (!modal) return;
-            modal.classList.add('hidden');
-            modal.classList.remove('flex');
-            document.body.style.overflow = 'auto';
+            if (window.gsap) {
+                gsap.to(modal.firstElementChild, {
+                    scale: 0.94,
+                    opacity: 0,
+                    y: 10,
+                    duration: 0.2,
+                    ease: "power2.in",
+                    onComplete: () => {
+                        modal.classList.add('hidden');
+                        modal.classList.remove('flex');
+                        document.body.style.overflow = 'auto';
+                    }
+                });
+            } else {
+                modal.classList.add('hidden');
+                modal.classList.remove('flex');
+                document.body.style.overflow = 'auto';
+            }
         }
 
         // Close on escape key
