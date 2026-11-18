@@ -6,7 +6,7 @@
 @section('content')
     <!-- 1. HERO SECTION (High-End Split Layout with Visual Showcase & Framer Motion) -->
     <section class="relative pt-6 pb-16 sm:pt-12 sm:pb-20">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl 2xl:max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-center">
                 
                 <!-- Left Column: Editorial Headline & Actions -->
@@ -126,7 +126,7 @@
 
     <!-- 2. TRUST METRICS STRIP -->
     <section class="motion-section py-8 border-y border-slate-200/80 bg-white/70 backdrop-blur-md">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl 2xl:max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
                 <div class="p-4">
                     <p class="text-3xl sm:text-4xl font-extrabold text-slate-950 font-mono">1,200+</p>
@@ -154,7 +154,7 @@
 
     <!-- 3. CORE DIVISIONS (CATERING VS TENT HOUSE) -->
     <section class="motion-section py-16 sm:py-20">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl 2xl:max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex flex-col sm:flex-row sm:items-end justify-between mb-12 gap-4">
                 <div>
                     <span class="text-xs font-bold uppercase tracking-wider text-amber-700 bg-amber-50 border border-amber-200 px-3 py-1 rounded-full">
@@ -251,7 +251,7 @@
 
     <!-- 4. SIGNATURE CUISINES & FOOD PREVIEW -->
     <section class="motion-section py-16 sm:py-20 border-t border-slate-200/80 bg-white/60">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl 2xl:max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-2xl mx-auto mb-12">
                 <span class="text-xs font-bold uppercase tracking-wider text-amber-700 bg-amber-50 border border-amber-200 px-3 py-1 rounded-full">
                     Gastronomic Excellence
@@ -316,7 +316,7 @@
 
     <!-- 5. OUR 6-STEP FLAWLESS EXECUTION PROCESS -->
     <section class="motion-section py-16 sm:py-20 border-t border-slate-200/80">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl 2xl:max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-xl mx-auto mb-14">
                 <span class="text-xs font-bold uppercase tracking-wider text-amber-700 bg-amber-50 border border-amber-200 px-3 py-1 rounded-full">
                     How We Work
@@ -383,7 +383,7 @@
 
     <!-- 6. LIVE EVENT WORK & PHOTO GALLERY -->
     <section class="motion-section py-16 sm:py-24 border-t border-slate-200/80 bg-white/60 backdrop-blur-sm">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl 2xl:max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
                 <div class="max-w-2xl">
                     <span class="text-xs font-bold uppercase tracking-wider text-amber-700 bg-amber-50 border border-amber-200 px-3.5 py-1 rounded-full inline-block mb-3">
@@ -604,7 +604,7 @@
 
     <!-- 7. WHY CHOOSE US (6 PILLARS) -->
     <section class="motion-section py-16 sm:py-20 border-t border-slate-200/80">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl 2xl:max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-xl mx-auto mb-12">
                 <span class="text-xs font-bold uppercase tracking-wider text-amber-700 bg-amber-50 border border-amber-200 px-3 py-1 rounded-full">
                     Our Guarantees
@@ -671,7 +671,7 @@
 
     <!-- 9. TESTIMONIALS -->
     <section class="motion-section py-16 sm:py-20 border-t border-slate-200/80 bg-white/50 backdrop-blur-sm">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl 2xl:max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex flex-col sm:flex-row sm:items-end justify-between mb-10 gap-3">
                 <div>
                     <h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-slate-950">
@@ -721,7 +721,7 @@
 
     <!-- 10. FREQUENTLY ASKED QUESTIONS -->
     <section class="motion-section py-16 sm:py-20 border-t border-slate-200/80">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-5xl 2xl:max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-10">
                 <span class="text-xs font-bold uppercase tracking-wider text-amber-700 bg-amber-50 border border-amber-200 px-3 py-1 rounded-full">
                     Clear Answers
@@ -777,7 +777,7 @@
 
     <!-- 11. INQUIRY & BOOKING FORM SECTION -->
     <section id="inquiry-section" class="motion-section py-16 sm:py-20 border-t border-slate-200/80 bg-white/60">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl 2xl:max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
                 
                 <!-- Left: Contact Details Card -->

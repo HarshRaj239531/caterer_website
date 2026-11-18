@@ -35,7 +35,7 @@
 
     <!-- Gallery Filter Bar & Grid -->
     <section class="pb-24">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl 2xl:max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
             
             <!-- Category Filter Tabs -->
             <div class="flex flex-wrap items-center justify-center gap-2 mb-12" id="gallery-filters">

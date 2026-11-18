@@ -16,7 +16,7 @@
     @php
         $manifestPath = public_path('build/manifest.json');
         $manifest = file_exists($manifestPath) ? json_decode(file_get_contents($manifestPath), true) : null;
-        $cssFile = $manifest['resources/css/app.css']['file'] ?? 'assets/app-BKE5L45W.css';
+        $cssFile = $manifest['resources/css/app.css']['file'] ?? 'assets/app-CFlMHEJZ.css';
         $jsFile = $manifest['resources/js/app.js']['file'] ?? 'assets/app-DYgVmTxt.js';
     @endphp
     <link rel="stylesheet" href="/build/{{ $cssFile }}">
@@ -41,7 +41,7 @@
 
     <!-- Minimal, High-End Floating Navbar (No Clutter, Clean & Refined) -->
     <header class="sticky top-0 z-50 px-4 sm:px-6 lg:px-8 pt-4 pb-2">
-        <nav id="main-navbar" class="max-w-6xl mx-auto bg-white/85 backdrop-blur-2xl border border-slate-200/80 rounded-full px-5 sm:px-7 h-16 flex items-center justify-between shadow-[0_4px_25px_-5px_rgba(0,0,0,0.04)] transition-all duration-300">
+        <nav id="main-navbar" class="max-w-7xl 2xl:max-w-[1400px] mx-auto bg-white/85 backdrop-blur-2xl border border-slate-200/80 rounded-full px-5 sm:px-8 h-16 flex items-center justify-between shadow-[0_4px_25px_-5px_rgba(0,0,0,0.04)] transition-all duration-300">
             
             <!-- Brand Logo (Clean & Elegant) -->
             <a href="{{ route('home') }}" class="flex items-center gap-2.5 group">
@@ -133,7 +133,7 @@
 
     <!-- Master Footer -->
     <footer class="relative z-10 bg-white/90 backdrop-blur-md border-t border-slate-200 text-slate-600 text-xs py-14 pb-28 md:pb-14 mt-20">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl 2xl:max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-10 pb-10 border-b border-slate-200">
                 <!-- Col 1: Brand -->
                 <div class="md:col-span-2 space-y-3">

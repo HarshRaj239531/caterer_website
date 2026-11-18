@@ -22,7 +22,7 @@
 
     <!-- Narrative & Values Grid -->
     <section class="pb-20">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl 2xl:max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
             <!-- Two Column Story -->
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
                 <div class="glass-card p-8 sm:p-12 rounded-3xl border border-slate-200">
