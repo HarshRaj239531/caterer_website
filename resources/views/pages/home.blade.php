@@ -3,350 +3,359 @@
 @section('title', 'Patna Caterer & Patna Tent House | Premier Catering & Event Infrastructure in Patna')
 
 @section('content')
-    <!-- HERO SECTION (Staggered Motion Entrance) -->
-    <section class="relative pt-10 pb-20 sm:pt-16 sm:pb-28">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="max-w-4xl mx-auto text-center">
-                <!-- Highlight Pill -->
-                <div class="motion-hero-item inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/95 border border-amber-300 shadow-sm text-amber-900 text-xs font-bold uppercase tracking-wider mb-6">
-                    <span class="w-2 h-2 rounded-full bg-amber-500 animate-pulse"></span>
-                    Patna's Premier Catering & Event Infrastructure
-                </div>
-
-                <!-- Main Hero Headline -->
-                <h1 class="motion-hero-item text-4xl sm:text-6xl lg:text-7xl font-black tracking-tight text-slate-950 uppercase leading-[1.08] mb-6">
-                    Grand Taste. <br>
-                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-600 via-amber-500 to-orange-600">Royal Hospitality.</span> <br>
-                    Flawless Celebrations.
-                </h1>
-
-                <!-- Sub-headline -->
-                <p class="motion-hero-item text-base sm:text-xl text-slate-600 max-w-2xl mx-auto font-normal leading-relaxed mb-10">
-                    From authentic Champaran Ahuna Handi and live chaat counters to royal German hangars and Vedic floral mandaps — we host Patna's most memorable weddings and banquets.
-                </p>
-
-                <!-- Call To Action Buttons -->
-                <div class="motion-hero-item flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
-                    <a href="{{ route('contact') }}"
-                       class="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-amber-500 to-amber-600 text-white font-black text-xs uppercase tracking-wider rounded-xl hover:from-amber-600 hover:to-amber-700 transition shadow-lg shadow-amber-500/25 flex items-center justify-center gap-2">
-                        <span>Get Free Event Quote</span>
-                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
-                    </a>
-
-                    <a href="tel:7717702563"
-                       class="w-full sm:w-auto px-8 py-4 bg-white border border-slate-300 text-slate-900 font-black text-xs uppercase tracking-wider rounded-xl hover:bg-slate-50 hover:border-amber-400 transition shadow-sm flex items-center justify-center gap-2">
-                        <svg class="w-4 h-4 text-amber-600" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 4V3z"/></svg>
-                        <span>Call 7717702563</span>
-                    </a>
-
-                    <a href="https://wa.me/917717702563?text=Hi%20Patna%20Caterer,%20please%20share%20your%20catering%20menu%20and%20pricing"
-                       target="_blank" rel="noopener noreferrer"
-                       class="w-full sm:w-auto px-6 py-4 bg-emerald-50 border border-emerald-300 text-emerald-800 font-bold text-xs uppercase tracking-wider rounded-xl hover:bg-emerald-100 transition shadow-sm flex items-center justify-center gap-2">
-                        <svg class="w-4 h-4 fill-current text-emerald-600" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766 0-3.18-2.587-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.007c.106.005.249-.04.39.299.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86.173.086.275.072.376-.044.101-.116.433-.506.549-.68.116-.173.231-.144.39-.086s1.011.477 1.184.564.289.13.332.202c.043.073.043.419-.101.824z"/></svg>
-                        <span>WhatsApp Menu</span>
-                    </a>
-                </div>
-
-                <!-- Trust Metrics Strip -->
-                <div class="motion-hero-item grid grid-cols-2 md:grid-cols-4 gap-4 pt-4">
-                    <div class="glass-card glass-card-hover p-6 rounded-2xl text-center">
-                        <p class="text-3xl sm:text-4xl font-black text-slate-900 font-mono">1,200+</p>
-                        <p class="text-xs uppercase tracking-wider text-amber-700 mt-1 font-bold">Events Executed</p>
-                        <p class="text-[11px] text-slate-500 mt-1">Weddings & Banquets</p>
+    <!-- HERO SECTION (High-End Split Layout with Visual Showcase & Framer Motion) -->
+    <section class="relative pt-8 pb-16 sm:pt-14 sm:pb-24">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+                
+                <!-- Left Column: Editorial Headline & Actions -->
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <!-- Eyebrow Badge -->
+                    <div class="motion-hero-item inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/90 border border-amber-300 shadow-xs text-amber-900 text-xs font-semibold">
+                        <span class="w-1.5 h-1.5 rounded-full bg-amber-500 animate-pulse"></span>
+                        <span>Patna's Premier Event Specialist</span>
                     </div>
-                    <div class="glass-card glass-card-hover p-6 rounded-2xl text-center">
-                        <p class="text-3xl sm:text-4xl font-black text-slate-900 font-mono">15+ Years</p>
-                        <p class="text-xs uppercase tracking-wider text-amber-700 mt-1 font-bold">Patna Heritage</p>
-                        <p class="text-[11px] text-slate-500 mt-1">Boring Road, Patna</p>
+
+                    <!-- Main Headline (Clean Editorial Title Case) -->
+                    <h1 class="motion-hero-item text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-950 leading-[1.12]">
+                        Royal Catering & <br class="hidden sm:inline">
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-600 to-orange-600">
+                            Luxury Event Decor
+                        </span> <br class="hidden sm:inline">
+                        in Patna
+                    </h1>
+
+                    <!-- Subtitle -->
+                    <p class="motion-hero-item text-base sm:text-lg text-slate-600 font-normal leading-relaxed max-w-xl mx-auto lg:mx-0">
+                        From authentic Champaran Ahuna Handi feasts and live chaat counters to royal German hangars and Vedic mandaps — we bring flawless hospitality to your celebrations.
+                    </p>
+
+                    <!-- Two Clean Primary Actions -->
+                    <div class="motion-hero-item flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3 pt-2">
+                        <a href="{{ route('contact') }}"
+                           class="w-full sm:w-auto px-7 py-3.5 bg-slate-950 hover:bg-slate-800 text-white font-semibold text-xs tracking-wide rounded-full transition shadow-md shadow-slate-950/10 flex items-center justify-center gap-2 group">
+                            <span>Request Event Quote</span>
+                            <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                        </a>
+
+                        <a href="tel:7717702563"
+                           class="w-full sm:w-auto px-6 py-3.5 bg-white/80 hover:bg-white border border-slate-300 hover:border-amber-400 text-slate-800 font-semibold text-xs tracking-wide rounded-full transition shadow-xs flex items-center justify-center gap-2">
+                            <svg class="w-3.5 h-3.5 text-amber-500" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 4V3z"/></svg>
+                            <span>Call 7717702563</span>
+                        </a>
                     </div>
-                    <div class="glass-card glass-card-hover p-6 rounded-2xl text-center">
-                        <p class="text-3xl sm:text-4xl font-black text-slate-900 font-mono">45+ Dishes</p>
-                        <p class="text-xs uppercase tracking-wider text-amber-700 mt-1 font-bold">Multi-Cuisines</p>
-                        <p class="text-[11px] text-slate-500 mt-1">Bihari, Mughlai, Sweets</p>
-                    </div>
-                    <div class="glass-card glass-card-hover p-6 rounded-2xl text-center">
-                        <p class="text-3xl sm:text-4xl font-black text-slate-900 font-mono">4.8 / 5.0</p>
-                        <p class="text-xs uppercase tracking-wider text-amber-700 mt-1 font-bold">Justdial Rating</p>
-                        <p class="text-[11px] text-slate-500 mt-1">Verified Top Service</p>
+
+                    <!-- Trust Proof Line -->
+                    <div class="motion-hero-item pt-4 flex flex-wrap items-center justify-center lg:justify-start gap-4 text-xs text-slate-500">
+                        <div class="flex items-center gap-1.5">
+                            <span class="text-amber-500 font-bold">★ 4.8</span>
+                            <a href="https://jsdl.in/DT-47WRSUKTS1G" target="_blank" rel="noopener noreferrer" class="hover:underline text-slate-700 font-medium">Justdial Verified</a>
+                        </div>
+                        <span class="text-slate-300">•</span>
+                        <span>1,200+ Events Hosted</span>
+                        <span class="text-slate-300">•</span>
+                        <span>15+ Years in Boring Road</span>
                     </div>
                 </div>
+
+                <!-- Right Column: Visual Showcase (High-End Glassmorphic Feature Cards) -->
+                <div class="lg:col-span-5 relative">
+                    <div class="space-y-4">
+                        <!-- Showcase Card 1: Royal Catering -->
+                        <div class="motion-card bg-white/90 backdrop-blur-xl border border-slate-200/90 rounded-2xl p-6 shadow-sm hover:shadow-md transition">
+                            <div class="flex items-center justify-between mb-3">
+                                <span class="text-[11px] font-bold uppercase tracking-wider text-amber-800 bg-amber-50 border border-amber-200 px-2.5 py-0.5 rounded-full">
+                                    Catering Division
+                                </span>
+                                <span class="text-xs font-semibold text-slate-400">40+ Dishes</span>
+                            </div>
+                            <h3 class="text-lg font-bold text-slate-900 mb-1">
+                                Royal Catering Feasts
+                            </h3>
+                            <p class="text-xs text-slate-500 leading-relaxed mb-4">
+                                Signature Champaran Ahuna Handi mutton, Desi Ghee Litti Chokha, Banarasi chaat counters, and Halwai sweets.
+                            </p>
+                            <div class="flex items-center justify-between text-xs pt-3 border-t border-slate-100">
+                                <span class="text-slate-500">Pure Desi Ghee & FSSAI Standards</span>
+                                <a href="{{ route('catering') }}" class="font-semibold text-amber-600 hover:text-amber-700">Explore Menu →</a>
+                            </div>
+                        </div>
+
+                        <!-- Showcase Card 2: Tent House & Decor -->
+                        <div class="motion-card bg-white/90 backdrop-blur-xl border border-slate-200/90 rounded-2xl p-6 shadow-sm hover:shadow-md transition">
+                            <div class="flex items-center justify-between mb-3">
+                                <span class="text-[11px] font-bold uppercase tracking-wider text-amber-800 bg-amber-50 border border-amber-200 px-2.5 py-0.5 rounded-full">
+                                    Infrastructure Division
+                                </span>
+                                <span class="text-xs font-semibold text-slate-400">All-Weather</span>
+                            </div>
+                            <h3 class="text-lg font-bold text-slate-900 mb-1">
+                                Grand Tent House & Decor
+                            </h3>
+                            <p class="text-xs text-slate-500 leading-relaxed mb-4">
+                                German hangar waterproof tents, Vedic floral mandaps, fairy truss lighting, commercial tower ACs, and silent DG sets.
+                            </p>
+                            <div class="flex items-center justify-between text-xs pt-3 border-t border-slate-100">
+                                <span class="text-slate-500">100% In-House Equipment</span>
+                                <a href="{{ route('tent-house') }}" class="font-semibold text-amber-600 hover:text-amber-700">View Setups →</a>
+                            </div>
+                        </div>
+
+                        <!-- Floating Location Pill -->
+                        <div class="motion-card flex items-center justify-between bg-white/80 border border-slate-200 rounded-xl px-4 py-2.5 text-xs text-slate-600">
+                            <div class="flex items-center gap-2">
+                                <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+                                <span class="font-medium">Near A.N. College, Boring Road, Patna</span>
+                            </div>
+                            <a href="https://wa.me/917717702563" target="_blank" rel="noopener noreferrer" class="font-semibold text-emerald-600 hover:underline">
+                                WhatsApp Us
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
 
-    <!-- TWO CORE DIVISIONS: CATERING vs TENT HOUSE (Motion Section) -->
-    <section class="motion-section py-16 sm:py-24">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-col md:flex-row md:items-end justify-between mb-14 gap-6">
+    <!-- CORE SERVICES OVERVIEW (Motion Section) -->
+    <section class="motion-section py-16 sm:py-20 border-t border-slate-200/80 bg-white/50 backdrop-blur-sm">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col sm:flex-row sm:items-end justify-between mb-12 gap-4">
                 <div>
-                    <span class="text-xs font-bold uppercase tracking-widest text-amber-700 bg-amber-50 border border-amber-200 px-3 py-1 rounded-full">
-                        Comprehensive Event Services
-                    </span>
-                    <h2 class="text-3xl sm:text-5xl font-black tracking-tight text-slate-950 uppercase mt-3">
-                        Two Master Divisions. <br>One Trusted Team.
+                    <h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-slate-950">
+                        Two Master Divisions, One Seamless Host
                     </h2>
+                    <p class="text-slate-500 text-sm mt-1">
+                        Complete event solutions without the hassle of coordinating conflicting third-party vendors.
+                    </p>
                 </div>
-                <p class="text-slate-600 max-w-md text-sm leading-relaxed">
-                    No need to coordinate with multiple conflicting vendors. We handle everything from the welcome drinks and live counters to German hangars and royal seating under one roof.
-                </p>
+                <a href="{{ route('packages') }}" class="text-xs font-semibold text-amber-600 hover:text-amber-700 flex items-center gap-1">
+                    <span>View Pricing Packages</span>
+                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                </a>
             </div>
 
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                <!-- Division 1: Catering -->
-                <div class="motion-card glass-card glass-card-hover p-8 sm:p-10 rounded-2xl border border-slate-200/90 relative flex flex-col justify-between">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Catering Card -->
+                <div class="motion-card glass-card p-8 rounded-2xl border border-slate-200/90 flex flex-col justify-between">
                     <div>
-                        <div class="flex items-center justify-between mb-6">
-                            <span class="text-xs font-extrabold uppercase tracking-wider px-3 py-1 bg-amber-100 text-amber-900 rounded-lg">
-                                Division 01
-                            </span>
-                            <span class="text-xs font-bold text-slate-500">
-                                Food & Hospitality
-                            </span>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-xs font-bold text-amber-800 bg-amber-50 px-2.5 py-1 rounded-md">Food & Catering</span>
+                            <span class="text-xs text-slate-400">50 to 5,000+ Guests</span>
                         </div>
-                        <h3 class="text-2xl sm:text-3xl font-black uppercase text-slate-950 mb-3">
-                            Patna Catering Services
-                        </h3>
-                        <p class="text-slate-600 text-sm leading-relaxed mb-6">
-                            Authentic taste crafted by master halwais and Mughlai chefs. Prepared in 100% pure desi ghee and branded spices under strict sanitary standards.
+                        <h3 class="text-xl font-bold text-slate-950 mb-2">Patna Catering Services</h3>
+                        <p class="text-slate-600 text-xs sm:text-sm leading-relaxed mb-6">
+                            Prepared with pure desi ghee and hand-ground spices by master Halwais and Awadhi ustads.
                         </p>
-
-                        <div class="space-y-3 text-xs sm:text-sm font-medium text-slate-700 mb-8">
-                            <div class="flex items-center gap-3">
-                                <span class="w-2 h-2 rounded-full bg-amber-500"></span>
-                                <span><strong>Champaran Ahuna Handi Mutton:</strong> Earthen-pot slow cooked on wood coal.</span>
-                            </div>
-                            <div class="flex items-center gap-3">
-                                <span class="w-2 h-2 rounded-full bg-amber-500"></span>
-                                <span><strong>Traditional Bihari Litti Chokha:</strong> Charcoal roasted with pure desi ghee.</span>
-                            </div>
-                            <div class="flex items-center gap-3">
-                                <span class="w-2 h-2 rounded-full bg-amber-500"></span>
-                                <span><strong>Live Street Food & Chaat:</strong> Banarasi Tamatar Chaat, Kolkata Puchka, Tikkis.</span>
-                            </div>
-                            <div class="flex items-center gap-3">
-                                <span class="w-2 h-2 rounded-full bg-amber-500"></span>
-                                <span><strong>Halwai Desserts:</strong> Live Jalebi-Rabri, Moong Dal Halwa, Matka Kulfi.</span>
-                            </div>
-                        </div>
+                        <ul class="space-y-2.5 text-xs text-slate-700 font-medium mb-6">
+                            <li class="flex items-center gap-2">
+                                <span class="text-amber-500 font-bold">•</span>
+                                <span>Champaran Ahuna Handi Mutton (Slow-cooked in clay pots)</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <span class="text-amber-500 font-bold">•</span>
+                                <span>Traditional Bihari Litti Chokha with Desi Ghee</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <span class="text-amber-500 font-bold">•</span>
+                                <span>Live Chaat Counters (Banarasi Tamatar Chaat, Kolkata Puchka)</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <span class="text-amber-500 font-bold">•</span>
+                                <span>Halwai Desserts (Hot Jalebi with Rabdi, Gajar Halwa, Kulfi)</span>
+                            </li>
+                        </ul>
                     </div>
-
-                    <div class="pt-6 border-t border-slate-200 flex items-center justify-between">
-                        <span class="text-xs font-bold text-slate-500">Capacity: 50 to 5,000+ Guests</span>
-                        <a href="{{ route('catering') }}" class="text-xs uppercase font-extrabold tracking-wider text-amber-600 hover:text-amber-700 flex items-center gap-1.5 group">
-                            <span>Explore Full Menu</span>
-                            <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
-                        </a>
+                    <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
+                        <span class="text-xs font-semibold text-slate-500">Pure Veg & Non-Veg Menus</span>
+                        <a href="{{ route('catering') }}" class="text-xs font-bold text-amber-600 hover:text-amber-700">Explore Catering →</a>
                     </div>
                 </div>
 
-                <!-- Division 2: Tent House -->
-                <div class="motion-card glass-card glass-card-hover p-8 sm:p-10 rounded-2xl border border-slate-200/90 relative flex flex-col justify-between">
+                <!-- Tent House Card -->
+                <div class="motion-card glass-card p-8 rounded-2xl border border-slate-200/90 flex flex-col justify-between">
                     <div>
-                        <div class="flex items-center justify-between mb-6">
-                            <span class="text-xs font-extrabold uppercase tracking-wider px-3 py-1 bg-amber-100 text-amber-900 rounded-lg">
-                                Division 02
-                            </span>
-                            <span class="text-xs font-bold text-slate-500">
-                                Infrastructure & Decor
-                            </span>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-xs font-bold text-amber-800 bg-amber-50 px-2.5 py-1 rounded-md">Tent & Infrastructure</span>
+                            <span class="text-xs text-slate-400">100% In-House</span>
                         </div>
-                        <h3 class="text-2xl sm:text-3xl font-black uppercase text-slate-950 mb-3">
-                            Patna Tent House & Event Decor
-                        </h3>
-                        <p class="text-slate-600 text-sm leading-relaxed mb-6">
-                            Transform any ground, lawn, or open space into a grand royal venue with all-weather German hangars, ambient lighting, and floral stage decor.
+                        <h3 class="text-xl font-bold text-slate-950 mb-2">Patna Tent House & Decor</h3>
+                        <p class="text-slate-600 text-xs sm:text-sm leading-relaxed mb-6">
+                            Engineered for safety and royal elegance. All-weather structures for banquets and open lawns.
                         </p>
-
-                        <div class="space-y-3 text-xs sm:text-sm font-medium text-slate-700 mb-8">
-                            <div class="flex items-center gap-3">
-                                <span class="w-2 h-2 rounded-full bg-amber-500"></span>
-                                <span><strong>German Hangar Waterproof Pandal:</strong> All-weather storm-safe structures.</span>
-                            </div>
-                            <div class="flex items-center gap-3">
-                                <span class="w-2 h-2 rounded-full bg-amber-500"></span>
-                                <span><strong>Royal Wedding Mandap:</strong> Vedic lotus & contemporary floral arches.</span>
-                            </div>
-                            <div class="flex items-center gap-3">
-                                <span class="w-2 h-2 rounded-full bg-amber-500"></span>
-                                <span><strong>Designer Reception Stage:</strong> LED video walls & VIP bridal seating.</span>
-                            </div>
-                            <div class="flex items-center gap-3">
-                                <span class="w-2 h-2 rounded-full bg-amber-500"></span>
-                                <span><strong>Climate & Generator Backup:</strong> Tower ACs, mist fans & heavy DG sets.</span>
-                            </div>
-                        </div>
+                        <ul class="space-y-2.5 text-xs text-slate-700 font-medium mb-6">
+                            <li class="flex items-center gap-2">
+                                <span class="text-amber-500 font-bold">•</span>
+                                <span>German Hangar Waterproof Pandal (All-weather safety)</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <span class="text-amber-500 font-bold">•</span>
+                                <span>Royal Wedding Mandap (Floral arches, Rajputana & Vedic themes)</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <span class="text-amber-500 font-bold">•</span>
+                                <span>Designer Reception Stage & High-Definition LED Walls</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <span class="text-amber-500 font-bold">•</span>
+                                <span>Tower ACs, Mist Cooling Fans & Soundproof DG Generator Sets</span>
+                            </li>
+                        </ul>
                     </div>
-
-                    <div class="pt-6 border-t border-slate-200 flex items-center justify-between">
-                        <span class="text-xs font-bold text-slate-500">100% In-House Inventory</span>
-                        <a href="{{ route('tent-house') }}" class="text-xs uppercase font-extrabold tracking-wider text-amber-600 hover:text-amber-700 flex items-center gap-1.5 group">
-                            <span>Explore Tent Infrastructure</span>
-                            <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
-                        </a>
+                    <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
+                        <span class="text-xs font-semibold text-slate-500">Zero Third-Party Dependency</span>
+                        <a href="{{ route('tent-house') }}" class="text-xs font-bold text-amber-600 hover:text-amber-700">Explore Tent Setups →</a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- FEATURED PACKAGES STRIP (Motion Section) -->
-    <section class="motion-section py-16 sm:py-24 bg-white/70 backdrop-blur-md border-y border-slate-200/80">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-14">
-                <span class="text-xs font-bold uppercase tracking-widest text-amber-700 bg-amber-50 border border-amber-200 px-3 py-1 rounded-full">
-                    Transparent Options
+    <!-- PACKAGES OVERVIEW (Motion Section) -->
+    <section class="motion-section py-16 sm:py-20 border-t border-slate-200/80">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-xl mx-auto mb-12">
+                <span class="text-xs font-bold uppercase tracking-wider text-amber-700 bg-amber-50 border border-amber-200 px-3 py-1 rounded-full">
+                    Transparent Estimates
                 </span>
-                <h2 class="text-3xl sm:text-4xl font-black uppercase tracking-tight text-slate-950 mt-3 mb-3">
+                <h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-slate-950 mt-3 mb-2">
                     Curated Event Packages
                 </h2>
-                <p class="text-slate-600 text-sm">
-                    Tailored for different party sizes with clear per-plate pricing and full customizability.
+                <p class="text-slate-500 text-xs sm:text-sm">
+                    Transparent per-plate pricing tailored to your guest count and chosen specifications.
                 </p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <!-- Silver -->
-                <div class="motion-card glass-card glass-card-hover p-8 rounded-2xl border border-slate-200 flex flex-col justify-between">
+                <div class="motion-card glass-card p-6 rounded-2xl border border-slate-200 flex flex-col justify-between">
                     <div>
-                        <div class="flex justify-between items-center mb-4">
-                            <span class="text-xs font-bold uppercase tracking-wider text-slate-600">Silver Package</span>
-                            <span class="text-[11px] bg-slate-100 text-slate-700 font-semibold px-2 py-0.5 rounded">Intimate</span>
+                        <div class="flex justify-between items-center mb-3">
+                            <span class="text-xs font-bold text-slate-600">Silver Package</span>
+                            <span class="text-[10px] bg-slate-100 px-2 py-0.5 rounded font-medium">50-200 Guests</span>
                         </div>
-                        <h3 class="text-xl font-black text-slate-950 uppercase mb-2">Birthday, Tilak & Puja</h3>
-                        <p class="text-xs text-slate-500 mb-6">50 to 200 Guests with complete buffet spread and neat canopy decor.</p>
-                        <div class="text-2xl font-black text-slate-900 font-mono mb-6">
-                            ₹450 - ₹650 <span class="text-xs text-slate-500 font-sans font-normal">/ per plate</span>
+                        <h4 class="text-base font-bold text-slate-950 mb-1">Birthday, Tilak & Puja</h4>
+                        <p class="text-xs text-slate-500 mb-4">Complete buffet spread with neat canopy decor and lighting.</p>
+                        <div class="text-xl font-bold text-slate-900 font-mono mb-4">
+                            ₹450 - ₹650 <span class="text-xs font-normal text-slate-500 font-sans">/ plate</span>
                         </div>
                     </div>
-                    <a href="{{ route('packages') }}" class="w-full text-center py-3 bg-slate-100 hover:bg-slate-200 text-slate-900 font-bold text-xs uppercase tracking-wider rounded-xl transition">
-                        View Package Details →
+                    <a href="{{ route('packages') }}" class="w-full text-center py-2.5 bg-slate-100 hover:bg-slate-200 text-slate-900 font-semibold text-xs rounded-xl transition">
+                        View Details
                     </a>
                 </div>
 
                 <!-- Gold -->
-                <div class="motion-card glass-card glass-card-hover p-8 rounded-2xl border-2 border-amber-400 relative shadow-xl shadow-amber-500/10 flex flex-col justify-between">
-                    <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-amber-500 text-white text-[11px] font-black uppercase tracking-widest px-3.5 py-1 rounded-full shadow">
-                        Most Popular in Patna
+                <div class="motion-card glass-card p-6 rounded-2xl border-2 border-amber-400 relative shadow-sm flex flex-col justify-between">
+                    <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-amber-500 text-white text-[10px] font-bold uppercase tracking-wider px-3 py-0.5 rounded-full">
+                        Popular Choice
                     </div>
                     <div>
-                        <div class="flex justify-between items-center mb-4 mt-1">
-                            <span class="text-xs font-bold uppercase tracking-wider text-amber-700">Gold Package</span>
-                            <span class="text-[11px] bg-amber-100 text-amber-800 font-semibold px-2 py-0.5 rounded">Grand Wedding</span>
+                        <div class="flex justify-between items-center mb-3 mt-1">
+                            <span class="text-xs font-bold text-amber-700">Gold Package</span>
+                            <span class="text-[10px] bg-amber-100 text-amber-800 px-2 py-0.5 rounded font-medium">200-800 Guests</span>
                         </div>
-                        <h3 class="text-xl font-black text-slate-950 uppercase mb-2">Wedding & Reception</h3>
-                        <p class="text-xs text-slate-500 mb-6">200 to 800 Guests with 32+ dishes, live chaat stalls, and royal mandap.</p>
-                        <div class="text-2xl font-black text-amber-600 font-mono mb-6">
-                            ₹750 - ₹1,150 <span class="text-xs text-slate-500 font-sans font-normal">/ per plate</span>
+                        <h4 class="text-base font-bold text-slate-950 mb-1">Grand Wedding & Reception</h4>
+                        <p class="text-xs text-slate-500 mb-4">32+ course menu, live chaat stalls, floral mandap, and VIP seating.</p>
+                        <div class="text-xl font-bold text-amber-600 font-mono mb-4">
+                            ₹750 - ₹1,150 <span class="text-xs font-normal text-slate-500 font-sans">/ plate</span>
                         </div>
                     </div>
-                    <a href="{{ route('packages') }}" class="w-full text-center py-3 bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-white font-bold text-xs uppercase tracking-wider rounded-xl transition shadow">
-                        View Package Details →
+                    <a href="{{ route('packages') }}" class="w-full text-center py-2.5 bg-slate-950 hover:bg-slate-800 text-white font-semibold text-xs rounded-xl transition shadow-xs">
+                        View Details
                     </a>
                 </div>
 
                 <!-- Platinum -->
-                <div class="motion-card glass-card glass-card-hover p-8 rounded-2xl border border-slate-200 flex flex-col justify-between">
+                <div class="motion-card glass-card p-6 rounded-2xl border border-slate-200 flex flex-col justify-between">
                     <div>
-                        <div class="flex justify-between items-center mb-4">
-                            <span class="text-xs font-bold uppercase tracking-wider text-slate-600">Platinum Royal</span>
-                            <span class="text-[11px] bg-slate-100 text-slate-700 font-semibold px-2 py-0.5 rounded">VIP / Luxury</span>
+                        <div class="flex justify-between items-center mb-3">
+                            <span class="text-xs font-bold text-slate-600">Platinum Royal</span>
+                            <span class="text-[10px] bg-slate-100 px-2 py-0.5 rounded font-medium">500+ Guests</span>
                         </div>
-                        <h3 class="text-xl font-black text-slate-950 uppercase mb-2">Celebrity Gala & Destination</h3>
-                        <p class="text-xs text-slate-500 mb-6">500+ Guests with German hangar, Ahuna meat live counter, and luxury decor.</p>
-                        <div class="text-2xl font-black text-slate-900 font-mono mb-6">
-                            ₹1,350 - ₹2,200 <span class="text-xs text-slate-500 font-sans font-normal">/ per plate</span>
+                        <h4 class="text-base font-bold text-slate-950 mb-1">Turnkey Luxury Gala</h4>
+                        <p class="text-xs text-slate-500 mb-4">German hangar AC pandal, Champaran live counter, and luxury decor.</p>
+                        <div class="text-xl font-bold text-slate-900 font-mono mb-4">
+                            ₹1,350 - ₹2,200 <span class="text-xs font-normal text-slate-500 font-sans">/ plate</span>
                         </div>
                     </div>
-                    <a href="{{ route('packages') }}" class="w-full text-center py-3 bg-slate-100 hover:bg-slate-200 text-slate-900 font-bold text-xs uppercase tracking-wider rounded-xl transition">
-                        View Package Details →
+                    <a href="{{ route('packages') }}" class="w-full text-center py-2.5 bg-slate-100 hover:bg-slate-200 text-slate-900 font-semibold text-xs rounded-xl transition">
+                        View Details
                     </a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- REAL CUSTOMER TESTIMONIALS (Motion Section) -->
-    <section class="motion-section py-16 sm:py-24">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-col md:flex-row md:items-end justify-between mb-14 gap-6">
+    <!-- TESTIMONIALS (Motion Section) -->
+    <section class="motion-section py-16 sm:py-20 border-t border-slate-200/80 bg-white/40">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col sm:flex-row sm:items-end justify-between mb-10 gap-3">
                 <div>
-                    <span class="text-xs font-bold uppercase tracking-widest text-amber-700 bg-amber-50 border border-amber-200 px-3 py-1 rounded-full">
-                        Verified Reviews
-                    </span>
-                    <h2 class="text-3xl sm:text-5xl font-black uppercase tracking-tight text-slate-950 mt-3">
-                        Loved by Families Across Patna
+                    <h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-slate-950">
+                        What Patna Families Say
                     </h2>
+                    <p class="text-slate-500 text-xs sm:text-sm mt-1">Real feedback from clients across Bailey Road, Boring Road, and Kankarbagh.</p>
                 </div>
-                <div class="flex items-center gap-3">
-                    <div class="text-amber-500 text-2xl font-bold">★★★★★</div>
-                    <span class="text-slate-600 text-sm font-semibold">4.8 / 5.0 on Justdial</span>
+                <div class="flex items-center gap-2">
+                    <span class="text-amber-500 font-bold text-base">★★★★★</span>
+                    <span class="text-xs font-semibold text-slate-700">4.8 / 5.0 Justdial Rating</span>
                 </div>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="motion-card glass-card glass-card-hover p-8 rounded-2xl flex flex-col justify-between">
-                    <div>
-                        <div class="text-amber-500 text-sm mb-3">★★★★★</div>
-                        <p class="text-sm text-slate-700 leading-relaxed italic mb-6">
-                            "Humne apne bete ki shaadi ke liye hire kiya tha near Bailey Road. Champaran Handi mutton aur hot jalebi-rabri ka swaad sabhi guests ne tareef kiya. Pandal ka decor bhi royal tha!"
-                        </p>
-                    </div>
-                    <div class="border-t border-slate-100 pt-4">
-                        <p class="text-xs font-bold text-slate-900 uppercase">Dr. Rajeshwar Prasad</p>
-                        <p class="text-[11px] text-slate-500">Wedding at Bailey Road, Patna</p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="motion-card glass-card p-6 rounded-2xl flex flex-col justify-between">
+                    <p class="text-xs sm:text-sm text-slate-600 leading-relaxed italic mb-4">
+                        "Humne apne bete ki shaadi ke liye hire kiya tha near Bailey Road. Champaran Handi mutton aur hot jalebi-rabri ka swaad sabhi guests ne tareef kiya. Pandal ka decor bhi royal tha!"
+                    </p>
+                    <div class="border-t border-slate-100 pt-3">
+                        <p class="text-xs font-bold text-slate-900">Dr. Rajeshwar Prasad</p>
+                        <p class="text-[11px] text-slate-400">Wedding at Bailey Road, Patna</p>
                     </div>
                 </div>
 
-                <div class="motion-card glass-card glass-card-hover p-8 rounded-2xl flex flex-col justify-between">
-                    <div>
-                        <div class="text-amber-500 text-sm mb-3">★★★★★</div>
-                        <p class="text-sm text-slate-700 leading-relaxed italic mb-6">
-                            "For our corporate annual meet in Patliputra, their buffet management was top class. Punctual setup, polite uniformed staff, and super fresh North Indian and Chinese spread."
-                        </p>
-                    </div>
-                    <div class="border-t border-slate-100 pt-4">
-                        <p class="text-xs font-bold text-slate-900 uppercase">Anand Srivastava</p>
-                        <p class="text-[11px] text-slate-500">Corporate Meet, Patliputra Colony</p>
+                <div class="motion-card glass-card p-6 rounded-2xl flex flex-col justify-between">
+                    <p class="text-xs sm:text-sm text-slate-600 leading-relaxed italic mb-4">
+                        "For our corporate annual meet in Patliputra, their buffet management was top class. Punctual setup, polite uniformed staff, and super fresh North Indian and Chinese spread."
+                    </p>
+                    <div class="border-t border-slate-100 pt-3">
+                        <p class="text-xs font-bold text-slate-900">Anand Srivastava</p>
+                        <p class="text-[11px] text-slate-400">Corporate Meet, Patliputra Colony</p>
                     </div>
                 </div>
 
-                <div class="motion-card glass-card glass-card-hover p-8 rounded-2xl flex flex-col justify-between">
-                    <div>
-                        <div class="text-amber-500 text-sm mb-3">★★★★★</div>
-                        <p class="text-sm text-slate-700 leading-relaxed italic mb-6">
-                            "7717702563 par contact kiya tha ring ceremony ke liye. Budget transparent tha aur koi hidden charges nahi liye. Live Banarasi Tamatar chaat aur Dal Makhani were superb!"
-                        </p>
-                    </div>
-                    <div class="border-t border-slate-100 pt-4">
-                        <p class="text-xs font-bold text-slate-900 uppercase">Pooja Kumari & Family</p>
-                        <p class="text-[11px] text-slate-500">Ring Ceremony, Kankarbagh</p>
+                <div class="motion-card glass-card p-6 rounded-2xl flex flex-col justify-between">
+                    <p class="text-xs sm:text-sm text-slate-600 leading-relaxed italic mb-4">
+                        "7717702563 par contact kiya tha ring ceremony ke liye. Budget transparent tha aur koi hidden charges nahi liye. Live Banarasi Tamatar chaat aur Dal Makhani were superb!"
+                    </p>
+                    <div class="border-t border-slate-100 pt-3">
+                        <p class="text-xs font-bold text-slate-900">Pooja Kumari & Family</p>
+                        <p class="text-[11px] text-slate-400">Ring Ceremony, Kankarbagh</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- QUICK CALLOUT TO CONTACT PAGE -->
-    <section class="pb-16 sm:pb-24">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="bg-gradient-to-br from-amber-500 via-amber-600 to-orange-600 rounded-3xl p-8 sm:p-14 text-white shadow-xl shadow-amber-500/20 text-center relative overflow-hidden">
-                <div class="relative z-10 max-w-2xl mx-auto">
-                    <span class="inline-block px-3.5 py-1 rounded-full bg-white/20 text-white text-xs font-extrabold uppercase tracking-widest mb-4">
-                        Lock Your Event Date
-                    </span>
-                    <h2 class="text-3xl sm:text-5xl font-black uppercase tracking-tight mb-4">
+    <!-- CLEAN CTA BANNER -->
+    <section class="pb-16 sm:pb-20">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-gradient-to-r from-amber-500 to-amber-600 rounded-3xl p-8 sm:p-12 text-white shadow-lg shadow-amber-500/15 text-center">
+                <div class="max-w-xl mx-auto space-y-4">
+                    <h3 class="text-2xl sm:text-3xl font-extrabold tracking-tight">
                         Planning an Event in Patna?
-                    </h2>
-                    <p class="text-amber-100 text-sm sm:text-base leading-relaxed mb-8">
-                        Call us directly or send an inquiry to check date availability, request a menu tasting, or arrange an on-site venue inspection near Boring Road.
+                    </h3>
+                    <p class="text-amber-100 text-xs sm:text-sm leading-relaxed">
+                        Call us directly or request an estimate online to check date availability and arrange a food tasting session at our Boring Road kitchen.
                     </p>
-                    <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-                        <a href="{{ route('contact') }}" class="w-full sm:w-auto px-8 py-3.5 bg-white text-slate-950 font-black text-xs uppercase tracking-wider rounded-xl hover:bg-slate-100 transition shadow">
-                            Send Booking Inquiry
+                    <div class="flex flex-col sm:flex-row items-center justify-center gap-3 pt-2">
+                        <a href="{{ route('contact') }}" class="w-full sm:w-auto px-7 py-3 bg-white text-slate-950 font-bold text-xs rounded-full hover:bg-slate-100 transition shadow-sm">
+                            Get Free Quote
                         </a>
-                        <a href="tel:7717702563" class="w-full sm:w-auto px-8 py-3.5 bg-slate-950 text-white font-black text-xs uppercase tracking-wider rounded-xl hover:bg-slate-900 transition flex items-center justify-center gap-2">
-                            <svg class="w-4 h-4 text-amber-400" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 4V3z"/></svg>
-                            <span>Call +91 7717702563</span>
+                        <a href="tel:7717702563" class="w-full sm:w-auto px-6 py-3 bg-slate-950 text-white font-bold text-xs rounded-full hover:bg-slate-900 transition flex items-center justify-center gap-1.5">
+                            <svg class="w-3.5 h-3.5 text-amber-400" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 4V3z"/></svg>
+                            <span>+91 7717702563</span>
                         </a>
                     </div>
                 </div>
