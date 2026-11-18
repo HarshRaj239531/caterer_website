@@ -11,18 +11,28 @@ class InquiryTest extends TestCase
     use RefreshDatabase;
 
     /**
-     * Test that the homepage loads successfully.
+     * Test that all dedicated website pages load successfully with 200 OK.
      */
-    public function test_homepage_loads_successfully(): void
+    public function test_all_pages_load_successfully(): void
     {
-        $response = $this->get('/');
+        $pages = [
+            '/' => 'Patna Caterer',
+            '/catering' => 'Authentic Cuisines',
+            '/tent-house' => 'German Hangar',
+            '/packages' => 'Transparent Packages',
+            '/about' => 'Our Story',
+            '/contact' => 'Get in Touch',
+        ];
 
-        $response->assertStatus(200);
-        $response->assertSee('Patna Caterer');
+        foreach ($pages as $url => $expectedContent) {
+            $response = $this->get($url);
+            $response->assertStatus(200);
+            $response->assertSee($expectedContent);
+        }
     }
 
     /**
-     * Test that users can submit an inquiry.
+     * Test that users can submit an inquiry through the booking form.
      */
     public function test_user_can_submit_inquiry(): void
     {
@@ -32,9 +42,9 @@ class InquiryTest extends TestCase
             'event_type' => 'Wedding',
             'event_date' => '2026-12-15',
             'guests_count' => 350,
-            'service_needed' => 'Catering & Tent House',
-            'food_preference' => 'Veg & Non-Veg',
-            'message' => 'Please share menu and pricing quotation.',
+            'service_needed' => 'Both Catering & Tent House',
+            'food_preference' => 'Veg & Non-Veg (Mutton/Chicken/Fish)',
+            'message' => 'Please share menu and pricing quotation for Boring Road event.',
         ]);
 
         $response->assertRedirect();

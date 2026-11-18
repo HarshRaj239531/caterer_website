@@ -2,8 +2,94 @@
 
 @source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
 @source '../../storage/framework/views/*.php';
+@source '../views/**/*.blade.php';
 
 @theme {
     --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
         'Segoe UI Symbol', 'Noto Color Emoji';
+}
+
+@keyframes float-slow {
+    0%, 100% {
+        transform: translate(0px, 0px) scale(1);
+    }
+    33% {
+        transform: translate(30px, -40px) scale(1.08);
+    }
+    66% {
+        transform: translate(-25px, 20px) scale(0.96);
+    }
+}
+
+@keyframes float-reverse {
+    0%, 100% {
+        transform: translate(0px, 0px) scale(1);
+    }
+    33% {
+        transform: translate(-35px, 30px) scale(0.95);
+    }
+    66% {
+        transform: translate(25px, -25px) scale(1.06);
+    }
+}
+
+@keyframes float-gentle {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: -200% 0;
+    }
+    100% {
+        background-position: 200% 0;
+    }
+}
+
+.animate-float-1 {
+    animation: float-slow 16s ease-in-out infinite;
+}
+
+.animate-float-2 {
+    animation: float-reverse 20s ease-in-out infinite;
+}
+
+.animate-float-3 {
+    animation: float-slow 24s ease-in-out infinite reverse;
+}
+
+.animate-float-gentle {
+    animation: float-gentle 6s ease-in-out infinite;
+}
+
+/* Background animated pattern grid */
+.bg-mesh-light {
+    background-color: #fafafa;
+    background-image: 
+        radial-gradient(at 10% 15%, rgba(245, 158, 11, 0.08) 0px, transparent 50%),
+        radial-gradient(at 90% 10%, rgba(244, 63, 94, 0.05) 0px, transparent 50%),
+        radial-gradient(at 50% 60%, rgba(59, 130, 246, 0.05) 0px, transparent 50%),
+        radial-gradient(at 80% 85%, rgba(245, 158, 11, 0.07) 0px, transparent 50%),
+        radial-gradient(at 20% 90%, rgba(16, 185, 129, 0.05) 0px, transparent 50%);
+}
+
+.glass-card {
+    background: rgba(255, 255, 255, 0.88);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(226, 232, 240, 0.8);
+}
+
+.glass-card-hover {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.glass-card-hover:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.03);
+    border-color: rgba(203, 213, 225, 1);
 }
