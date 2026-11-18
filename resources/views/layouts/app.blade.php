@@ -125,7 +125,7 @@
     </main>
 
     <!-- Master Footer -->
-    <footer class="relative z-10 bg-white/90 backdrop-blur-md border-t border-slate-200 text-slate-600 text-xs py-14 mt-20">
+    <footer class="relative z-10 bg-white/90 backdrop-blur-md border-t border-slate-200 text-slate-600 text-xs py-14 pb-28 md:pb-14 mt-20">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-10 pb-10 border-b border-slate-200">
                 <!-- Col 1: Brand -->
