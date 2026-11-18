@@ -149,7 +149,7 @@
                         Patna's trusted catering and luxury event infrastructure partner with 15+ years of excellence. Hosting memorable weddings, receptions, and corporate galas across Bihar.
                     </p>
                     <div class="pt-1 text-slate-600 space-y-1">
-                        <div><strong>Location:</strong> Near A.N. College, Boring Road, Patna, Bihar - 800013</div>
+                        <div><strong>Location:</strong> 233, Rajesh Petrol Building, An Collage, A N College, Boring Road, Patna-800001, Bihar</div>
                         <div><strong>Phone:</strong> <a href="tel:7717702563" class="font-bold text-slate-900 hover:text-amber-600">+91 7717702563</a></div>
                         <div><strong>Profile:</strong> <a href="https://jsdl.in/DT-47WRSUKTS1G" target="_blank" rel="noopener noreferrer" class="hover:text-amber-600 underline">Justdial Verified (DT-47WRSUKTS1G)</a></div>
                     </div>

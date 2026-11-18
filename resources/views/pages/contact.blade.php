@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title', 'Contact & Booking | Patna Caterer & Patna Tent House')
-@section('meta_description', 'Contact Patna Caterer & Patna Tent House near A.N. College, Boring Road, Patna. Call 7717702563 for booking inquiries, menu tasting, and event planning.')
+@section('meta_description', 'Contact Patna Caterer & Patna Tent House at 233, Rajesh Petrol Building, A N College, Boring Road, Patna. Call 7717702563 for booking inquiries, menu tasting, and event planning.')
 
 @section('content')
     <!-- Contact Header -->
@@ -35,7 +35,7 @@
                             Patna Caterer & Patna Tent House
                         </h2>
                         <p class="text-xs text-slate-600 leading-relaxed mb-8">
-                            Reach out by phone, WhatsApp, or drop by our office near A.N. College for a detailed personal consultation.
+                            Reach out by phone, WhatsApp, or drop by our office at 233, Rajesh Petrol Building, A N College, Boring Road for a detailed personal consultation.
                         </p>
 
                         <div class="space-y-6 text-xs text-slate-700">
@@ -46,7 +46,7 @@
                                 </div>
                                 <div>
                                     <span class="block font-bold text-slate-900 uppercase text-[11px] tracking-wider">Office & Central Kitchen</span>
-                                    <span class="text-slate-600">Near A.N. College, Boring Road, Patna, Bihar - 800013, India</span>
+                                    <span class="text-slate-600">233, Rajesh Petrol Building, An Collage, A N College, Boring Road, Patna-800001, Bihar</span>
                                 </div>
                             </div>
 

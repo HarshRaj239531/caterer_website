@@ -47,7 +47,7 @@
                     Patna Verified
                 </span>
                 <span class="text-zinc-400 hidden sm:inline">|</span>
-                <span class="text-zinc-300">Near A.N. College, Boring Road, Patna, Bihar</span>
+                <span class="text-zinc-300">233, Rajesh Petrol Building, An Collage, A N College, Boring Road, Patna-800001, Bihar</span>
             </div>
             <div class="flex items-center gap-4 text-zinc-300">
                 <a href="https://jsdl.in/DT-47WRSUKTS1G" target="_blank" rel="noopener noreferrer" class="hover:text-white transition flex items-center gap-1 underline underline-offset-4 decoration-zinc-600 hover:decoration-white">
@@ -1196,7 +1196,7 @@
                                 </div>
                                 <div>
                                     <span class="block font-bold text-white uppercase text-[11px] tracking-wider">Office & Kitchen Location</span>
-                                    <span>Near A.N. College, Boring Road, Patna - 800013, Bihar, India</span>
+                                    <span>233, Rajesh Petrol Building, An Collage, A N College, Boring Road, Patna-800001, Bihar</span>
                                 </div>
                             </div>
 
@@ -1422,7 +1422,7 @@
                     </p>
                     <div class="flex items-center gap-3 text-xs text-zinc-400">
                         <span class="text-white font-medium">Head Office:</span>
-                        <span>Near A.N. College, Boring Road, Patna, Bihar - 800013</span>
+                        <span>233, Rajesh Petrol Building, An Collage, A N College, Boring Road, Patna-800001, Bihar</span>
                     </div>
                     <div class="flex items-center gap-3 text-xs text-zinc-400 mt-1">
                         <span class="text-white font-medium">Direct Line:</span>

@@ -62,7 +62,7 @@
                         <span class="text-slate-300">•</span>
                         <span>1,200+ Events Hosted</span>
                         <span class="text-slate-300">•</span>
-                        <span>Near A.N. College, Boring Road</span>
+                        <span>233, Rajesh Petrol Building, A N College, Boring Road</span>
                     </div>
                 </div>
 
@@ -112,7 +112,7 @@
                     <div class="motion-card flex items-center justify-between bg-white/80 border border-slate-200 rounded-xl px-4 py-2.5 text-xs text-slate-600">
                         <div class="flex items-center gap-2">
                             <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
-                            <span class="font-medium">Office: Boring Road, Near A.N. College, Patna</span>
+                            <span class="font-medium">Office: 233, Rajesh Petrol Building, A N College, Boring Road, Patna</span>
                         </div>
                         <a href="https://wa.me/917717702563" target="_blank" rel="noopener noreferrer" class="font-bold text-emerald-600 hover:underline">
                             WhatsApp Us
@@ -136,7 +136,7 @@
                 <div class="p-4">
                     <p class="text-3xl sm:text-4xl font-extrabold text-slate-950 font-mono">15+ Years</p>
                     <p class="text-xs uppercase tracking-wider text-amber-700 font-bold mt-1">Heritage in Patna</p>
-                    <p class="text-[11px] text-slate-400 mt-0.5">Near A.N. College, Boring Road</p>
+                    <p class="text-[11px] text-slate-400 mt-0.5">233, Rajesh Petrol Building, Boring Road</p>
                 </div>
                 <div class="p-4">
                     <p class="text-3xl sm:text-4xl font-extrabold text-slate-950 font-mono">5,000+</p>
@@ -799,7 +799,7 @@
                             <span class="w-2 h-2 rounded-full bg-amber-500 mt-1.5 shrink-0"></span>
                             <div>
                                 <strong class="block text-slate-900">Office & Commissary Kitchen:</strong>
-                                <span>Near A.N. College, Boring Road, Patna, Bihar - 800013</span>
+                                <span>233, Rajesh Petrol Building, An Collage, A N College, Boring Road, Patna-800001, Bihar</span>
                             </div>
                         </div>
 

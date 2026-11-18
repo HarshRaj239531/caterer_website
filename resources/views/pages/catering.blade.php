@@ -237,7 +237,7 @@
                     Want a Customized Menu for Your Event?
                 </h3>
                 <p class="text-slate-600 text-sm max-w-xl mx-auto mb-6">
-                    We invite you to our central kitchen near A.N. College, Boring Road for a menu planning and tasting consultation.
+                    We invite you to our central kitchen at 233, Rajesh Petrol Building, A N College, Boring Road for a menu planning and tasting consultation.
                 </p>
                 <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
                     <a href="https://wa.me/917717702563?text=Hi%20Patna%20Caterer,%20please%20send%20your%20full%20menu%20options"

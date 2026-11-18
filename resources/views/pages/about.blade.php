@@ -36,7 +36,7 @@
                         In Bihar, hospitality is an emotion. When guests attend a wedding, the taste of the food and the grandeur of the pandal define the memories they take home.
                     </p>
                     <p class="text-sm text-slate-600 leading-relaxed mb-6">
-                        Over the past 15 years, <strong>Patna Caterer & Patna Tent House</strong> has grown from an intimate local caterer into one of the city's premier turnkey event partners. Located near A.N. College on Boring Road, our central commissary kitchen and vast equipment depot service celebrations across the entire state.
+                        Over the past 15 years, <strong>Patna Caterer & Patna Tent House</strong> has grown from an intimate local caterer into one of the city's premier turnkey event partners. Located at 233, Rajesh Petrol Building, A N College, Boring Road, our central commissary kitchen and vast equipment depot service celebrations across the entire state.
                     </p>
                     <div class="pt-4 border-t border-slate-200 flex items-center gap-6 text-xs text-slate-700">
                         <div>
