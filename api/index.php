@@ -14,12 +14,17 @@ foreach ($storageDirs as $dir) {
     }
 }
 
-// 2. Direct Static Asset Streamer (guarantees CSS, JS, and gallery images NEVER 404)
+// 2. Direct Static Asset Streamer (checks both public and dist)
 $uri = parse_url($_SERVER['REQUEST_URI'] ?? '/', PHP_URL_PATH);
 $publicFile = __DIR__ . '/../public' . $uri;
+$distFile = __DIR__ . '/../dist' . $uri;
 
-if ($uri !== '/' && file_exists($publicFile) && is_file($publicFile)) {
-    $ext = strtolower(pathinfo($publicFile, PATHINFO_EXTENSION));
+$targetFile = (file_exists($publicFile) && is_file($publicFile))
+    ? $publicFile
+    : ((file_exists($distFile) && is_file($distFile)) ? $distFile : null);
+
+if ($uri !== '/' && $targetFile) {
+    $ext = strtolower(pathinfo($targetFile, PATHINFO_EXTENSION));
     $mimes = [
         'css'   => 'text/css; charset=UTF-8',
         'js'    => 'application/javascript; charset=UTF-8',
@@ -37,7 +42,7 @@ if ($uri !== '/' && file_exists($publicFile) && is_file($publicFile)) {
         header('Content-Type: ' . $mimes[$ext]);
     }
     header('Cache-Control: public, max-age=31536000');
-    readfile($publicFile);
+    readfile($targetFile);
     exit;
 }
 
